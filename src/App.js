@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import FirstPage from './components/loginAndCreateAccount/FirstPage';
+import classes from './App.module.css';
 
 function App() {
+  const [isLogedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.app}>
+     { !isLogedIn && 
+      <section>
+       <FirstPage />
+      </section> }
     </div>
   );
-}
+};
 
 export default App;

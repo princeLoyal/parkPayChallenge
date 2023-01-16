@@ -1,0 +1,6 @@
+.app section { 
+    margin: auto;
+    position: relative;
+    height: 100vh;
+    max-width: 30rem;
+}
