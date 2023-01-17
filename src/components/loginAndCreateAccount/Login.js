@@ -36,6 +36,9 @@ const Login = () => {
         </form>
         <footer className={classes['login-footer']}>
         <p>Don't have an account? <button onClick={accountCreateButtonClickHandler}>Create Account</button></p>
+        <p>
+             By tapping Sign up, you agree to our <button>Terms & conditions</button> <br/>and <button>Privacy Policy</button>
+        </p>
         </footer>
         </main> }
     </Fragment>
