@@ -1,8 +1,13 @@
-.firstPage {
+.parkpay {
     background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: inherit;
-    width: inherit;
+    height: 100vh;
+    max-width: inherit;
+    width: 90%;
 }
+.parkpay h1 {
+    color: white;
+    font-size: 3rem;
+ }

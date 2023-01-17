@@ -1,0 +1,45 @@
+.create-account-header {
+    text-align: center;
+}
+.create-account-header h1 {
+      color: blue;
+      margin: 1.5rem 0 0.5rem 0;
+}
+.create-account-form {
+    margin: 2rem 0;
+    text-align: center;
+}
+.create-account-form input {
+    margin: 1rem auto;
+    display: block;
+    padding: 0.4rem;
+    width: 90%;
+    border: 1px solid rgba(128,128,128, 0.5);
+    border-radius: 5px;
+}
+.create-account-form button {
+      width: 90%;
+      background-color: blue;
+      border-color: blue;
+      padding: 0.5rem;
+      color: white;
+      border-radius: 5px;
+}
+.create-account-header-footer p:first-child {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.create-account-header-footer p:first-child button {
+    margin-left: 1rem;
+}
+.create-account-header-footer button {
+    background-color: transparent;
+    color: blue;
+    border: none;
+}
+.create-account-header-footer p:last-child {
+    margin: 0 4rem auto;
+    font-size: 0.75rem;
+}
