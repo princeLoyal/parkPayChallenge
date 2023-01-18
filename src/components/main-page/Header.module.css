@@ -1,16 +1,17 @@
-.header {
+.header-header {
+  position: relative;
   background-color: blue;
-  border-radius: 1.5rem;
-  padding: 2rem 1rem;
+  border-radius: 1rem;
+  padding: 2rem 1rem 0;
   color: white;
 }
-.header div:last-child{
+.header-header div:last-child{
     background-image: url('../../picturesAndFiles/Lines.png');
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .header div:first-child {
+  .header-firstDiv {
     display: flex;
     flex-direction: column;
   }
@@ -20,13 +21,33 @@
     top: 2rem;
     right: 2rem
   }
-  .header .header-firstDiv p:nth-child(2){
+.header-firstDiv p:nth-child(2){
     margin-top: 9px;
     font-size: 1.1rem;
     font-weight: bold;
   }
-  .header .header-firstDiv .header-wavyhand {
+ .header-firstDiv .header-wavyhand {
     position: absolute;
     left: 4.2rem;
     top: 3.9rem;
   }
+  .header-secondDiv {
+    padding-top: 2rem;
+  }
+  .header-secondDiv p:nth-child(1){
+    font-size: 2.5vw;
+  }
+  .header-secondDiv p:nth-child(2) {
+    font-size: 10vw;
+    line-height: 4rem;
+    margin-bottom: 0.5rem;
+  }
+.header-secondDiv p:nth-child(3) {
+     font-size:3vw;
+     margin: 1rem;
+}
+.header-secondDiv p:nth-child(2) span {
+  position: absolute;
+  right:4rem;
+  bottom:4.5rem;
+}
