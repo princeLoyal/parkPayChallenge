@@ -1,0 +1,32 @@
+.header {
+  background-color: blue;
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+  color: white;
+}
+.header div:last-child{
+    background-image: url('../../picturesAndFiles/Lines.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header div:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-bell {
+    align-self: flex-end;
+    position: absolute;
+    top: 2rem;
+    right: 2rem
+  }
+  .header .header-firstDiv p:nth-child(2){
+    margin-top: 9px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .header .header-firstDiv .header-wavyhand {
+    position: absolute;
+    left: 4.2rem;
+    top: 3.9rem;
+  }
