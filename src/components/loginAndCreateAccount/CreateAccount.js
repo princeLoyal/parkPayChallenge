@@ -6,6 +6,7 @@ const CreateAccount = () => {
    const accountCreationHandler = event => {
       event.preventDefault();
       localStorage.setItem('loggedIn', 1);
+      alert('local storage set')
    }
    const loginButtonClickHandler = () => {
            setCreatingAccount(false);
