@@ -7,6 +7,7 @@ const MainPage = () => {
         <Fragment>
             <Header />
             <Transaction />
+            <TransactionList />
         </Fragment>
     );
 };
