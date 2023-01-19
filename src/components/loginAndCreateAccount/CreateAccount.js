@@ -5,6 +5,7 @@ const CreateAccount = () => {
    const [creatingAcount, setCreatingAccount] = useState(true);
    const accountCreationHandler = event => {
       event.preventDefault();
+      localStorage.setItem('loggedIn', 1);
    }
    const loginButtonClickHandler = () => {
            setCreatingAccount(false);
