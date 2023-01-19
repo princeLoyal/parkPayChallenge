@@ -24,7 +24,7 @@ const Header = () => {
             <div className={classes['header-secondDiv']}>
                 <p>Current balance</p>
                 <p>#{date.currentBalance}.00
-                <span><img src={hiddenEye} alt='A hidden eye' width='40'/></span>
+                <span><img src={hiddenEye} alt='A hidden eye' width='25'/></span>
                 </p>
                 <p>{date.weekDay}, {date.monthDay}th {date.month}</p>
             </div>
