@@ -7,10 +7,11 @@
     justify-content: space-between;
     border-radius: 3rem;
     background-color: lightblue;
+    padding: 0.7rem;
 }
 .transaction-header-div div {
     width: 50%;
-    margin: 0.7rem 0.3rem 0.7rem 0.7rem;
+    margin: 0 0 0.3rem 0;
     padding: 0.4rem;
     background-color: whitesmoke;
     border-radius: 2rem;
