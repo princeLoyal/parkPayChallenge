@@ -1,0 +1,30 @@
+.transaction {
+    margin: 1rem;
+}
+.transaction-header-div  {
+    border: 1px solid rgba(0,0,200, 0.4);
+    display:flex;
+    justify-content: space-between;
+    border-radius: 3rem;
+    background-color: lightblue;
+}
+.transaction-header-div div {
+    width: 50%;
+    margin: 0.7rem;
+    padding: 0.4rem;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+}
+.transaction-header-div div .fSpan {
+    background-color:blue;
+    display: inline-flex;
+    padding: 2px;
+    border-radius: 1rem;
+}
+.transaction-header-div div .sSpan {
+    margin-left: 0rem;
+    position: absolute;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: 600;
+}

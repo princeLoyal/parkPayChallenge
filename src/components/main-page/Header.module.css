@@ -1,5 +1,5 @@
 .header-header {
-  max-width: 30rem;
+  max-width: inherit;
   position: relative;
   background-color: blue;
   border-radius: 1rem;
