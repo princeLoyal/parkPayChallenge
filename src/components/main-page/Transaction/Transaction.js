@@ -1,4 +1,6 @@
 import { Fragment } from 'react';
+import TransactionList from './TransactionList';
+
 import transfer from '../../../picturesAndFiles/mingcute_transfer-3-line.png';
 import card from '../../../picturesAndFiles/ph_credit-card.png';
 
@@ -20,6 +22,7 @@ const Transaction = () => {
                         </div>
                     </div>
                 </header>
+                <TransactionList />
             </div>
         </Fragment>
     );
