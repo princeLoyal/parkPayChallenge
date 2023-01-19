@@ -8,8 +8,7 @@
 }
 .header-header div:last-child{
     background-image: url('../../picturesAndFiles/Lines.png');
-    background-repeat: no-repeat;
-    background-size: 300%;
+    background-size: 200%;
     display: flex;
     flex-direction: column;
     align-items: center;
