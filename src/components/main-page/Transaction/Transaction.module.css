@@ -10,7 +10,7 @@
 }
 .transaction-header-div div {
     width: 50%;
-    margin: 0.7rem;
+    margin: 0.7rem 0.7rem 0.2rem;
     padding: 0.4rem;
     background-color: whitesmoke;
     border-radius: 2rem;
