@@ -10,7 +10,8 @@ function App() {
    const loggedIn = localStorage.getItem('login');
    if(loggedIn === 1){
        setIsLoggedIn(true);
-   }
+       alert('hshsh');
+   };
  }, []);
 
   return (
