@@ -35,10 +35,10 @@
 }
 .transactionList-main-li-div-1 {
     width: 50%;
-    padding-left: 1rem;
+    padding-left: 0.2rem;
     position: relative;
     display: flex;
-    gap: 1rem;
+    gap: 5px;
 }
 .transactionList-main-li-div-1-1 p{
     display: flex;
