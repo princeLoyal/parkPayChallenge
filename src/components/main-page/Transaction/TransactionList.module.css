@@ -48,6 +48,9 @@
     position: relative;
     top: 1rem;
 }
+.transactionList-main-div-p {
+   font-weight: bold;
+}
 @media only screen and (min-width: 600px) {
    .transactionList-main li {
         font-size: 1rem;
