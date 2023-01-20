@@ -52,7 +52,7 @@
    font-weight: bold;
    color: #1f1f1f;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
    .transactionList-main li {
         font-size: 1rem;
    }

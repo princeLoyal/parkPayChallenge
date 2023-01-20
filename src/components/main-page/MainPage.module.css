@@ -1,0 +1,10 @@
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.imgStyle {
+    position: fixed;
+    top: 60%;
+    right: 2px;
+}
