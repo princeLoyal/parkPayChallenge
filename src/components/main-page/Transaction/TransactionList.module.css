@@ -48,5 +48,8 @@
     position: relative;
     top: 1rem;
 }
-.transactionList-main-li-div-2 {
+@media only screen and (min-width: 600px) {
+   .transactionList-main li {
+        font-size: 1rem;
+   }
 }
