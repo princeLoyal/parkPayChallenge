@@ -7,12 +7,10 @@
     z-index: 20;
     background-color: rgba(0, 0, 0, 0.75);
   }
-  
-  .modal {
+ .modal {
     position: fixed;
-    top: 15vh;
-    left: 5%;
-    width: 90%;
+    bottom: 0;
+    width: 70%;
     background-color: white;
     padding: 1rem;
     border-radius: 14px;
@@ -37,4 +35,14 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  .content div span:first-child img{
+     width: 1.2rem;
+  }
+  .content div {
+    display: flex;
+  }
+  .content div span:last-child {
+    justify-self: flex-end;
+    align-self: flex-end;
   }

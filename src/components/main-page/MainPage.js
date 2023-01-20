@@ -4,6 +4,7 @@ import Transaction from "./Transaction/Transaction";
 import Footer from './Footer';
 import plus from '../../picturesAndFiles/Frame 1000001199.png';
 import classes from './MainPage.module.css';
+import Modal from '../UI/Modal';
 const MainPage = () => {
     return (
         <Fragment>
