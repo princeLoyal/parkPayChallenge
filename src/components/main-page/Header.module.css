@@ -1,12 +1,12 @@
 .header-header {
-  position: absolute;
+  position: sticky;
   width: 100%;
   background: #123CAA;
   border-radius: 20px;
   z-index: 30;
 }
 .header-firstDiv p:nth-child(1){
-  margin: 1rem 0 0 1rem;
+  padding: 1rem 0 0 1rem;
   font-family: 'Helvetica Neue';
   font-size: 14px;
   line-height: 30px;
@@ -34,7 +34,7 @@
 .header-secondDiv {
     padding: 1rem;
     background-image: url('../../picturesAndFiles/Lines.png');
-    background-size: 250%;
+    background-size: 200%;
 } 
 .header-secondDiv p:nth-child(1){
   margin-top: 2rem;
