@@ -11,9 +11,15 @@ const MainPage = () => {
                 <p className={classes.imgStyle}>
                     <img src={plus} alt='Add transaction' width='100'/>
                 </p>
-                <Header />
+                <header>
+                    <Header />
+                </header>
+                <main>
                 <Transaction />
+                </main>
+                <footer>
                 <Footer />
+                </footer>
             </div>
         </Fragment>
     );

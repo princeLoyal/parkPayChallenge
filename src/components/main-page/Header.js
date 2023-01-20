@@ -14,21 +14,25 @@ const Header = () => {
     }
     return (
         <Fragment>
+            <div>
             <header className={classes['header-header']}>
                 <div className={classes['header-firstDiv']}>
                     <p>Welcome back,</p> 
-                    <p>West</p> 
-                    <img src={wavyHand} width='20' className={classes['header-wavyhand']}/>
-                    <img src={notificationBell} width='40' className={classes['header-bell']}/>
+                    <p>West 
+                    <img src={wavyHand} className={classes['header-wavyhand']}/>
+                    </p> 
+                    <img src={notificationBell}  className={classes['header-bell']}/>
                 </div>
             <div className={classes['header-secondDiv']}>
                 <p>Current balance</p>
                 <p> &#8358;{date.currentBalance}.00
-                <span><img src={hiddenEye} alt='A hidden eye' width='25'/></span>
+                <img src={hiddenEye} alt='A hidden eye' 
+                className={classes['header-hidden-eye']} />
                 </p>
                 <p>{date.weekDay}, {date.monthDay}th {date.month}</p>
             </div>
             </header>
+            </div>
         </Fragment>
     );
 };

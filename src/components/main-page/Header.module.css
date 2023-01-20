@@ -1,12 +1,77 @@
 .header-header {
-  max-width: inherit;
-  position: relative;
-  background-color: blue;
-  border-radius: 1rem;
-  padding: 2rem 1rem 0;
-  color: white;
+  position: absolute;
+  width: 100%;
+  background: #123CAA;
+  border-radius: 20px;
+  z-index: 30;
 }
-.header-header div:last-child{
+.header-firstDiv p:nth-child(1){
+  margin: 1rem 0 0 1rem;
+  font-family: 'Helvetica Neue';
+  font-size: 14px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.header-firstDiv p:nth-child(2){
+  margin: 0 1rem;
+  position: relative;
+  font-family: 'Helvetica Neue';
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.header-firstDiv .header-wavyhand{
+  position: absolute;
+  width:18.33px;
+  left: 2.5rem;
+  }
+  .header-firstDiv .header-bell {
+    position: absolute;
+    width: 40px;
+    right: 3.75%;
+    top: 9.93%;
+  }
+.header-secondDiv {
+    padding: 1rem;
+    background-image: url('../../picturesAndFiles/Lines.png');
+    background-size: 250%;
+} 
+.header-secondDiv p:nth-child(1){
+  margin-top: 2rem;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.header-secondDiv p:nth-child(2){
+  position: relative;
+  font-size: 2.5rem;
+  line-height: 45px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.header-hidden-eye {
+    position: absolute;
+    width:18.33px;
+}
+.header-secondDiv p:nth-child(3){
+  margin-top: 3rem;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  }
+
+
+
+
+
+
+/* .header-header div:last-child{
     background-image: url('../../picturesAndFiles/Lines.png');
     background-size: 200%;
     display: flex;
@@ -54,6 +119,7 @@
   top: -1.5rem;
   right: -2.5rem;
 }
+*/
 @media only screen and (min-width: 600px) {
   .header-secondDiv p:nth-child(1){
     font-size: 0.8rem;
@@ -64,4 +130,4 @@
   .header-secondDiv p:nth-child(3){
     font-size: 1rem;
   }
-}
+} 
