@@ -9,7 +9,7 @@ const MainPage = () => {
         <Fragment>
             <div className={classes.mainDiv}>
                 <p className={classes.imgStyle}>
-                    <img src={plus} alt='Add transaction' width='120'/>
+                    <img src={plus} alt='Add transaction' width='100'/>
                 </p>
                 <Header />
                 <Transaction />
