@@ -17,7 +17,7 @@ const TransactionList = props => {
                            <div className={classes['transactionList-main-li-div-1']}>
                               <div className={classes['transactionList-main-li-div-1-1']}>
                                  {transaction.type === 'credit' && <p><img src={credit} alt='credit symbol' width='30'/></p>}
-                                 {transaction.type === 'debit' && <p><img src={debit} alt='debit symbol' width=''30/></p>}
+                                 {transaction.type === 'debit' && <p><img src={debit} alt='debit symbol' width='30'/></p>}
                               </div>
                               <div>
                                  <p className={classes['transactionList-main-div-p']}>{transaction.name}</p>
