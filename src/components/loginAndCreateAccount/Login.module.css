@@ -32,6 +32,7 @@
     margin-bottom: 2rem;
     font-size: 0.7rem;
     color: blue;
+    cursor:pointer;
 }
 .login-form button {
     margin: auto;
@@ -41,6 +42,7 @@
     padding: 0.5rem;
     color: white;
     border-radius: 5px;
+    cursor:pointer;
 }
 .login-footer p:first-child{
     text-align: center;
@@ -58,4 +60,5 @@
     background-color: transparent;
     color: blue;
     border: none;
+    cursor:pointer;
 }

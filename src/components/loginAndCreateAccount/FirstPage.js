@@ -1,7 +1,7 @@
 import { useEffect, useState, Fragment } from 'react'
 import CreateAccount from './CreateAccount';
 import classes from './FirstPage.module.css';
-const FirstPage = () => {
+const FirstPage = props => {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
      const timeout = setTimeout(() => {
@@ -17,7 +17,7 @@ const FirstPage = () => {
                  <h1>Parkpay</h1> 
             </div> }
             { !isLoading &&<div>
-                  <CreateAccount />
+                  <CreateAccount onLogin={props.onLogin}/>
             </div> }
         </Fragment>
     )

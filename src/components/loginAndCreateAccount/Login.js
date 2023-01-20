@@ -1,13 +1,17 @@
 import { Fragment, useState } from "react";
 import CreateAccount from "./CreateAccount";
 import classes from './Login.module.css';
-const Login = () => {
+const Login = props => {
     const [loggingIn, setLoggingIn] = useState(true);
     const accountCreateButtonClickHandler = () => {
         setLoggingIn(false);
     };
     const loginHandler = event => {
         event.preventDefault();
+
+        localStorage.setItem('loggedIn', 1);
+        alert("Your logged in status has been saved. You won't need to log when the page refreshes");
+        props.onLogin();
     };
     return <Fragment>
         {!loggingIn && <CreateAccount />}
@@ -23,6 +27,7 @@ const Login = () => {
             type='email' 
             placeholder="Email address"
             className={classes['login-email']}
+            required
             />
             <label htmlFor="password"></label>
             <input 
@@ -30,6 +35,7 @@ const Login = () => {
             type='password' 
             placeholder="password"
             className={classes['login-password']}
+            required
             />
             <p>Forgot pasword?</p>
             <button type="submit">Log In</button>

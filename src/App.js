@@ -8,15 +8,19 @@ function App() {
   
  useEffect(() => {
    const loggedIn = localStorage.getItem('loggedIn');
-   if(loggedIn === 1){
+   if(loggedIn === '1'){
        setIsLoggedIn(true);
    };
  }, []);
 
+  const onLoginHandler = () => {
+      setIsLoggedIn(true);
+  }
+
   return (
     <div className={classes.app}>
      { !isLoggedIn && <section>
-       <FirstPage />
+       <FirstPage onLogin={onLoginHandler}/>
       </section>}
       {isLoggedIn && <section>
              <MainPage />

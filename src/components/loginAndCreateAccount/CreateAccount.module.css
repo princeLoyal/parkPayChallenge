@@ -25,6 +25,7 @@
       padding: 0.5rem;
       color: white;
       border-radius: 5px;
+      cursor:pointer;
 }
 .create-account-header-footer p:first-child {
     text-align: center;
@@ -39,6 +40,7 @@
     background-color: transparent;
     color: blue;
     border: none;
+    cursor:pointer;
 }
 .create-account-header-footer p:last-child {
     margin: auto;
