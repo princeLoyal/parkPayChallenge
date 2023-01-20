@@ -20,13 +20,13 @@ const TransactionList = props => {
                                  {transaction.type === 'debit' && <p><img src={debit} alt='debit symbol'/></p>}
                               </div>
                               <div>
-                                 <p>{transaction.name}</p>
+                                 <p className={classes['transactionList-main-div-p']}>{transaction.name}</p>
                                  <p>{transaction.bank}</p>
                                  <p>{transaction.accountNumber}</p>
                               </div>
                            </div>
                            <div>
-                              <p>{transaction.amount}</p>
+                              <p className={classes['transactionList-main-div-p']}>{transaction.amount}</p>
                               <p>{transaction.date}</p>
                               <p>{transaction.time}</p>
                            </div>
