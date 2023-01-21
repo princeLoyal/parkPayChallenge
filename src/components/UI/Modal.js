@@ -16,7 +16,9 @@ const ModalOverlay = (props) => {
             <span><img src={backArrow}/></span>
             <span>Select Option</span>
          </div>
+         <div className={classes['div-2']}>
             {props.children}
+         </div>
       </div>
     </div>
   );
