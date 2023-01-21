@@ -5,7 +5,7 @@ import backArrow from '../../picturesAndFiles/left.png';
 import classes from './Modal.module.css';
 
 const Backdrop = (props) => {
-  return <div className={classes.backdrop} onClick={props.onClose}/>;
+  return <div className={classes.backdrop} onClick={() => props.onClose(false)}/>;
 };
 
 const ModalOverlay = (props) => {

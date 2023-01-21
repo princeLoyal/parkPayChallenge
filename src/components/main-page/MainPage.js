@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import plus from '../../picturesAndFiles/Frame 1000001199.png';
 import recieve from '../../picturesAndFiles/mingcute_transfer-3-line.png';
 import make from '../../picturesAndFiles/carbon_send-alt.png';
@@ -9,10 +9,14 @@ import Footer from './Footer';
 import classes from './MainPage.module.css';
 import Modal from '../UI/Modal';
 const MainPage = () => {
+    const [showModal, setShowModal] = useState(false);
+    const showModalHandler = bool => {
+        setShowModal(bool);
+    }
     return (
         <Fragment>
             <div className={classes.mainDiv}>
-                <p className={classes.imgStyle}>
+                <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
                     <img src={plus} alt='Add transaction' width='100'/>
                 </p>
                 <header>
@@ -20,7 +24,7 @@ const MainPage = () => {
                 </header>
                 <main>
                 <Transaction />
-                <Modal>
+                { showModal && <Modal onClose={showModalHandler}>
                     <div className={classes['main-page-div']}>
                         <p className={classes['main-page-div-p']}><img src={recieve} alt='payment Icon'/></p>
                         <div className={classes['main-page-div-1']}>
@@ -35,7 +39,7 @@ const MainPage = () => {
                             <p>send money to bank account</p>
                         </div>
                     </div>
-                </Modal>
+                </Modal>}
                 </main>
                 <footer>
                 <Footer />

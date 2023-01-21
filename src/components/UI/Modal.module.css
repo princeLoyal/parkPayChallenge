@@ -9,7 +9,7 @@
   }
  .modal {
     position: fixed;
-    top: 20vh;
+    bottom: 0;
     left:calc(50% - 11rem);
     background-color: white;
     border-radius: 14px;
