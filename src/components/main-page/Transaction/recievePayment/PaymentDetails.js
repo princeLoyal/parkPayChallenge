@@ -60,7 +60,7 @@ const PaymentDetails = props => {
                 </div>
                 <div>
                     <p>Account Name</p>
-                    <p>Brian West</p>
+                    <p>Thompson Onuoha Uchenna</p>
                 </div>
                 <div>
                     <p>Amount</p>
