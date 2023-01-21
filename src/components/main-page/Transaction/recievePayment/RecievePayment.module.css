@@ -23,6 +23,7 @@
     color: #374151;
 }
 .payment-1-div-p {
+    cursor:pointer;
     align-self: center;
 }
 .payment-1-div-p img {

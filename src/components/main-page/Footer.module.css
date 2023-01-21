@@ -14,6 +14,7 @@
     line-height: 19px;
     letter-spacing: -0.02em;
     color: #9E9E9E;
+    cursor: pointer;
 }
 .footer-footer div span img{
     width:3rem;

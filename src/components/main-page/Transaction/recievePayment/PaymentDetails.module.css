@@ -1,0 +1,93 @@
+.payment-div {
+    background: rgba(128,128,128,0.5);
+    padding: 0.5rem 1px;
+    height:110vh;
+    border-radius: 1rem;
+}
+.payment-1-div {
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2vw 5vw;
+    margin: 1rem 0;
+}
+.payment-1-div p:nth-child(1) {
+    font-weight: 700;
+    line-height: 20px;
+    color: #1F2937;
+}
+.payment-1-div p:nth-child(2) {
+    font-size: 14px;
+    line-height: 17px;
+    color: #374151;
+}
+.payment-1-div-p {
+    cursor:pointer;
+    align-self: center;
+}
+.payment-1-div-p img {
+    width:1rem
+}
+.payment-2-div {
+    background: #FFFFFF;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+.payment-2-div div {
+    padding: 1rem;
+    border:1px solid rgba(222, 220, 220, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.payment-2-div div p:nth-child(1) {
+    line-height: 19px;
+    color: #696969;
+}
+.payment-2-div div p:nth-child(2) {
+    line-height: 19px;
+}
+.payment-2-div div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+.payment-img-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    gap: 8px;
+    background: #123CAA;
+    border-radius: 4px;
+}
+.payment-img-p img {
+    width:15px;
+}
+.payment-3-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+.payment-3-div p:nth-child(1) img {
+    width:3rem;
+}
+.payment-3-div p:nth-child(2) {
+    margin: 1rem;
+    color:#DB2438;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.payment-button {
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.25px;
+    color: #696969;
+    border: none;
+    background: transparent;
+    margin: 1rem;
+}

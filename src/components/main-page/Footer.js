@@ -11,11 +11,11 @@ const Footer = () => {
                     <span><img src={home} alt='Home icon'/></span>
                     <p>Home</p>
                 </div>
-                <div className={classes['footer-footer-div-2']}>
+                <div>
                     <span><img src={transaction} alt='Transaction icon'/></span>
                     <p>Transaction</p>
                 </div>
-                <div className={classes['footer-footer-div-3']}>
+                <div>
                     <span><img src={profile} alt='Profile icon'/></span>
                     <p>Profile</p>
                 </div>

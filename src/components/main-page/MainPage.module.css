@@ -2,36 +2,38 @@
     position: relative;
 }
 .imgStyle {
+    cursor: pointer;
     position: absolute;
     right: 0;
     bottom: 30%;
     z-index: 2
 }
-.main-page-div {
+.modal-div {
     background: #FDFDFD;
     border: 1px solid #DEDCDC;
     border-radius: 8px;
     padding: 1rem 0.5rem;  
     display:flex;
     margin-top: 1rem;
-    gap: 3rem
+    gap: 3rem;
+    cursor: pointer;
 }
-.main-page-div-p {
+.modal-div-p {
     display:flex;
     background-color: #123CAA;
     border-radius: 10rem;
     padding: 0.5rem;
 }
-.main-page-div-p img {
+.modal-div-p img {
     width:30px
 }
-.main-page-div-1 p:nth-child(1) {
+.modal-div-1 p:nth-child(1) {
     font-family: 'Helvetica Neue';
     font-weight: 600;
     line-height: 19px;
     color: #000000;
 }
-.main-page-div-1 p:nth-child(2) {
+.modal-div-1 p:nth-child(2) {
     font-family: 'Helvetica Neue';
     font-size: 14px;
     font-weight: 400;

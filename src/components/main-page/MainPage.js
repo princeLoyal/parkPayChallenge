@@ -8,7 +8,8 @@ import Transaction from "./Transaction/Transaction";
 import Footer from './Footer';
 import classes from './MainPage.module.css';
 import Modal from '../UI/Modal';
-import RecievePayment from "./Transaction/RecievePayment";
+import RecievePayment from "./Transaction/recievePayment/RecievePayment";
+
 const MainPage = () => {
     const [showModal, setShowModal] = useState(false);
     const [showMainPage, setShowMainPage] = useState(true);
@@ -16,9 +17,10 @@ const MainPage = () => {
     const showModalHandler = bool => {
         setShowModal(bool);
     }
-    const clickPaymentHandler = () => {
-        setShowMainPage(false);
-        setShowRecievePayment(true);
+    const clickPaymentHandler = bool => {
+        setShowMainPage(!bool);
+        setShowRecievePayment(bool);
+        setShowModal(!bool)
     }
     return (
         <Fragment>
@@ -32,16 +34,16 @@ const MainPage = () => {
                 <main>
                 <Transaction />
                 { showModal && <Modal onClose={showModalHandler}>
-                    <div className={classes['main-page-div']} onClick={clickPaymentHandler}>
-                        <p className={classes['main-page-div-p']}><img src={recieve} alt='payment Icon'/></p>
-                        <div className={classes['main-page-div-1']}>
+                    <div className={classes['modal-div']} onClick={() => clickPaymentHandler(true)}>
+                        <p className={classes['modal-div-p']}><img src={recieve} alt='payment Icon'/></p>
+                        <div className={classes['modal-div-1']}>
                             <p>Recieve payment</p>
                             <p>Recieve payment via bank transfer</p>
                         </div>
                     </div>
-                    <div className={classes['main-page-div']}>
-                        <p className={classes['main-page-div-p']}><img src={make} alt='Make payment' /></p>
-                        <div className={classes['main-page-div-1']}>
+                    <div className={classes['modal-div']}>
+                        <p className={classes['modal-div-p']}><img src={make} alt='Make payment' /></p>
+                        <div className={classes['modal-div-1']}>
                             <p>Make payment</p>
                             <p>send money to bank account</p>
                         </div>
@@ -52,7 +54,7 @@ const MainPage = () => {
                 <Footer />
                 </footer>
             </div> }
-            {!showMainPage &&  showRecievePayment && <RecievePayment />}
+            {!showMainPage &&  showRecievePayment && <RecievePayment onClose={clickPaymentHandler}/>}
         </Fragment>
     );
 };
