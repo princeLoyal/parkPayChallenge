@@ -14,7 +14,7 @@ const ModalOverlay = (props) => {
       <div className={classes.content}>
           <div className={classes['div-1']}>
             <span><img src={backArrow}/></span>
-            <span>Select Option</span>
+            <span>{props.header}</span>
          </div>
          <div className={classes['div-2']}>
             {props.children}
@@ -37,5 +37,4 @@ const Modal = (props) => {
     </Fragment>
   );
 };
-
 export default Modal;

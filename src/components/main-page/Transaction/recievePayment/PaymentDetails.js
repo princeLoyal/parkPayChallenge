@@ -20,6 +20,8 @@ const PaymentDetails = props => {
                         sec: 59,
                     }
                     return newCounter;
+                } else if(prevCount.sec === 0 && prevCount.min === 0) {
+                    return prevCount;
                 } else {
                     return {
                         min: prevCount.min,
@@ -32,7 +34,7 @@ const PaymentDetails = props => {
         return () => {
             clearTimeout(interval);
         }
-    }, [counter])
+    }, [counter]);
     return (
         <div className={classes['payment-div']}>
             <div className={classes['payment-1-div']}>

@@ -33,7 +33,7 @@ const MainPage = () => {
                 </header>
                 <main>
                 <Transaction />
-                { showModal && <Modal onClose={showModalHandler}>
+                { showModal && <Modal onClose={showModalHandler} header='Select Option'>
                     <div className={classes['modal-div']} onClick={() => clickPaymentHandler(true)}>
                         <p className={classes['modal-div-p']}><img src={recieve} alt='payment Icon'/></p>
                         <div className={classes['modal-div-1']}>
