@@ -58,6 +58,7 @@
     gap: 8px;
     background: #123CAA;
     border-radius: 4px;
+    color:#fff
 }
 .payment-img-p img {
     width:15px;
@@ -90,4 +91,17 @@
     border: none;
     background: transparent;
     margin: 1rem;
+}
+.payment-modal {
+    display: flex;
+    padding: 0 2rem;
+    gap:1rem;
+}
+.payment-modal div {
+    border: 1px solid blue;
+    padding: 0.5rem;
+    border-radius: 3rem;
+}
+.payment-modal div img {
+    width:2rem;
 }

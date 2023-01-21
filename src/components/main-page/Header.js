@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import classes from './Header.module.css';
 import wavyHand from '../../picturesAndFiles/mdi_hand-wave-outline.png';
-import hiddenEye from '../../picturesAndFiles/Eye\,\ Hidden.png'
+import hiddenEye from '../../picturesAndFiles/Eye\,\ Hidden.png';
 import notificationBell from '../../picturesAndFiles/clarity_notification-outline-badged.png';
 const Header = () => {
     const weekDays = ['Monday', 'Tuesday', 'Wednessday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -21,7 +21,7 @@ const Header = () => {
                     <p>West 
                     <img src={wavyHand} className={classes['header-wavyhand']}/>
                     </p> 
-                    <img src={notificationBell}  className={classes['header-bell']}/>
+                    <img src={notificationBell}  alt='notification'className={classes['header-bell']}/>
                 </div>
             <div className={classes['header-secondDiv']}>
                 <p>Current balance</p>

@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import plus from '../../picturesAndFiles/Frame 1000001199.png';
 import recieve from '../../picturesAndFiles/mingcute_transfer-3-line.png';
 import make from '../../picturesAndFiles/carbon_send-alt.png';
+import Del from './Transaction/recievePayment/PaymentDetails';
 
 import Header from "./Header";
 import Transaction from "./Transaction/Transaction";
@@ -55,6 +56,7 @@ const MainPage = () => {
                 </footer>
             </div> }
             {!showMainPage &&  showRecievePayment && <RecievePayment onClose={clickPaymentHandler}/>}
+        {/* <Del /> */}
         </Fragment>
     );
 };
