@@ -6,12 +6,26 @@ import close from '../../../../picturesAndFiles/close buttom sheet modal icon.pn
 import frame from '../../../../picturesAndFiles/Frame 1000000960.png';
 import classes from './PaymentDetails.module.css';
 const PaymentDetails = props => {
-    const [counter, setCounter ] = useState(30);
+    const [counter, setCounter ] = useState({
+        min:30,
+        sec:0
+    });
 
     useEffect(() => {
         const interval = setTimeout(() => {
             setCounter(prevCount => {
-                return prevCount - 1;
+                if(prevCount.sec === 0){
+                    const newCounter = {
+                        min: prevCount.min - 1,
+                        sec: 59,
+                    }
+                    return newCounter;
+                } else {
+                    return {
+                        min: prevCount.min,
+                        sec: prevCount.sec - 1,
+                    }
+                }
             });
         }, 1000);
 
@@ -55,7 +69,7 @@ const PaymentDetails = props => {
             </div>
             <div className={classes['payment-3-div']}>
                 <p><img src={frame} alt='frame'/></p>
-                <p>Account expires in<span>{counter}.00</span></p>
+                <p>Account expires in<span>{counter.min}.{counter.sec}</span></p>
                 <Button>
                     Share
                 </Button>
