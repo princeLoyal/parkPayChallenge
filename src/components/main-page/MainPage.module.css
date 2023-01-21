@@ -7,6 +7,34 @@
     bottom: 30%;
     z-index: 2
 }
-.mainDiv header {
-    
+.main-page-div {
+    background: #FDFDFD;
+    border: 1px solid #DEDCDC;
+    border-radius: 8px;
+    padding: 1rem;  
+    display:flex;
+    margin-top: 1rem;
+    gap: 3rem
+}
+.main-page-div-p {
+    display:flex;
+    background-color: #123CAA;
+    border-radius: 10rem;
+    padding: 0.5rem;
+}
+.main-page-div-p img {
+    width:30px
+}
+.main-page-div-1 p:nth-child(1) {
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    line-height: 19px;
+    color: #000000;
+}
+.main-page-div-1 p:nth-child(2) {
+    font-family: 'Helvetica Neue';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #696969;
 }

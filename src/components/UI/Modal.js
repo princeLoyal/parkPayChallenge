@@ -12,7 +12,7 @@ const ModalOverlay = (props) => {
   return (
     <div className={classes.modal}>
       <div className={classes.content}>
-          <div>
+          <div className={classes['div-1']}>
             <span><img src={backArrow}/></span>
             <span>Select Option</span>
          </div>

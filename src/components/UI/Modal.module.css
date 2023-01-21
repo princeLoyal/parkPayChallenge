@@ -9,20 +9,19 @@
   }
  .modal {
     position: fixed;
-    bottom: 0;
-    width: 70%;
+    top: 50%;
+    left:5%;
     background-color: white;
-    padding: 1rem;
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
     animation: slide-down 300ms ease-out forwards;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 600px) {
     .modal {
-      width: 40rem;
-      left: calc(50% - 20rem);
+      width: 35rem;
+      left: calc(50% - 18rem);
     }
   }
   
@@ -39,10 +38,12 @@
   .content div span:first-child img{
      width: 1.2rem;
   }
-  .content div {
+  .content .div-1 {
     display: flex;
+    gap:30%;
   }
   .content div span:last-child {
-    justify-self: flex-end;
-    align-self: flex-end;
+    font: 20px;
+    line-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
   }
