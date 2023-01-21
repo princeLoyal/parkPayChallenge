@@ -1,9 +1,24 @@
+import { useState, useEffect } from 'react';
+
 import Button from '../../../UI/Button';
 import copy from '../../../../picturesAndFiles/file_copy.png';
 import close from '../../../../picturesAndFiles/close buttom sheet modal icon.png';
 import frame from '../../../../picturesAndFiles/Frame 1000000960.png';
 import classes from './PaymentDetails.module.css';
 const PaymentDetails = props => {
+    const [counter, setCounter ] = useState(30);
+
+    useEffect(() => {
+        const interval = setTimeout(() => {
+            setCounter(prevCount => {
+                return prevCount - 1;
+            });
+        }, 1000);
+
+        return () => {
+            clearTimeout(interval);
+        }
+    }, [counter])
     return (
         <div className={classes['payment-div']}>
             <div className={classes['payment-1-div']}>
@@ -40,7 +55,7 @@ const PaymentDetails = props => {
             </div>
             <div className={classes['payment-3-div']}>
                 <p><img src={frame} alt='frame'/></p>
-                <p>Account expires in<span>30.00</span></p>
+                <p>Account expires in<span>{counter}.00</span></p>
                 <Button>
                     Share
                 </Button>
