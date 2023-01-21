@@ -11,13 +11,18 @@ import Modal from '../UI/Modal';
 import RecievePayment from "./Transaction/RecievePayment";
 const MainPage = () => {
     const [showModal, setShowModal] = useState(false);
-    const [mainPage, setMainPage] = useState(true);
+    const [showMainPage, setShowMainPage] = useState(true);
+    const [showRecievePayment, setShowRecievePayment] = useState(false);
     const showModalHandler = bool => {
         setShowModal(bool);
     }
+    const clickPaymentHandler = () => {
+        setShowMainPage(false);
+        setShowRecievePayment(true);
+    }
     return (
         <Fragment>
-             { mainPage && <div className={classes.mainDiv}>
+             { showMainPage && <div className={classes.mainDiv}>
                 <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
                     <img src={plus} alt='Add transaction' width='100'/>
                 </p>
@@ -27,7 +32,7 @@ const MainPage = () => {
                 <main>
                 <Transaction />
                 { showModal && <Modal onClose={showModalHandler}>
-                    <div className={classes['main-page-div']}>
+                    <div className={classes['main-page-div']} onClick={clickPaymentHandler}>
                         <p className={classes['main-page-div-p']}><img src={recieve} alt='payment Icon'/></p>
                         <div className={classes['main-page-div-1']}>
                             <p>Recieve payment</p>
@@ -47,7 +52,7 @@ const MainPage = () => {
                 <Footer />
                 </footer>
             </div> }
-            {!mainPage && <RecievePayment />}
+            {!showMainPage &&  showRecievePayment && <RecievePayment />}
         </Fragment>
     );
 };
