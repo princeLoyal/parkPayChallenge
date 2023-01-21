@@ -8,14 +8,16 @@ import Transaction from "./Transaction/Transaction";
 import Footer from './Footer';
 import classes from './MainPage.module.css';
 import Modal from '../UI/Modal';
+import RecievePayment from "./Transaction/RecievePayment";
 const MainPage = () => {
     const [showModal, setShowModal] = useState(false);
+    const [mainPage, setMainPage] = useState(true);
     const showModalHandler = bool => {
         setShowModal(bool);
     }
     return (
         <Fragment>
-            <div className={classes.mainDiv}>
+             { mainPage && <div className={classes.mainDiv}>
                 <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
                     <img src={plus} alt='Add transaction' width='100'/>
                 </p>
@@ -44,7 +46,8 @@ const MainPage = () => {
                 <footer>
                 <Footer />
                 </footer>
-            </div>
+            </div> }
+            {!mainPage && <RecievePayment />}
         </Fragment>
     );
 };
