@@ -1,0 +1,51 @@
+.withdraw-div {
+    background: rgba(128,128,128,0.5);
+    padding: 0.5rem 1px;
+    height:100vh;
+    border-radius: 1rem;
+}
+.withdraw-1-div {
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2vw 5vw;
+    margin: 1rem 0;
+}
+.withdraw-1-div p:nth-child(1) {
+    font-weight: 700;
+    line-height: 20px;
+    color: #1F2937;
+}
+.withdraw-1-div p:nth-child(2) {
+    font-size: 14px;
+    line-height: 17px;
+    color: #374151;
+}
+.withdraw-1-div-p {
+    cursor:pointer;
+    align-self: center;
+}
+.withdraw-1-div-p img {
+    width:1rem
+}
+.withdraw-2-div form {
+    margin: 2rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    color: #141519;
+}
+.withdraw-2-div form label {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.withdraw-button {
+    width: 90%;
+    display: block;
+    margin: 15vh auto;
+}
+.withdraw-input {
+    height: 5rem;
+}

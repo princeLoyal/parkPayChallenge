@@ -110,7 +110,7 @@ const PaymentDetails = props => {
                     { props.type === 'recieve' &&   <Button onClick={() => shareButtonHandler(true)} className={classes['payment-details-button']}>
                         Share
                     </Button> }
-                    { props.type === 'make' &&   <Button onClick={() => shareButtonHandler(true)} className={classes['payment-details-button']}>
+                    { props.type === 'make' &&   <Button onClick={() => shareButtonHandler()} className={classes['payment-details-button']}>
                         I've completed the payment
                     </Button> }
                     <button className={classes['payment-button']}>

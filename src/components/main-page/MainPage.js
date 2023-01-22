@@ -2,14 +2,14 @@ import { Fragment, useState } from "react";
 import plus from '../../picturesAndFiles/Frame 1000001199.png';
 import recieve from '../../picturesAndFiles/mingcute_transfer-3-line.png';
 import make from '../../picturesAndFiles/carbon_send-alt.png';
-import Del from './Transaction/recievePayment/PaymentResult';
+import Del from './Transaction/Withdraw';
 
 import Header from "./Header";
 import Transaction from "./Transaction/Transaction";
 import Footer from './Footer';
 import classes from './MainPage.module.css';
 import Modal from '../UI/Modal';
-import HandlePayment from "./Transaction/recievePayment/HandlePayment";
+import HandlePayment from "./Transaction/paymentHandler/HandlePayment";
 
 const MainPage = () => {
     const [showModal, setShowModal] = useState(false);
@@ -48,7 +48,7 @@ const MainPage = () => {
                     <Header />
                 </header>
                 <main>
-                <Transaction />
+                <Transaction showModal={showModalHandler}/>
                 { showModal && <Modal onClose={showModalHandler} header='Select Option'>
                     <div className={classes['modal-div']} onClick={() => clickPaymentHandler(true, 'recieve')}>
                         <p className={classes['modal-div-p']}><img src={recieve} alt='payment Icon'/></p>
@@ -70,7 +70,7 @@ const MainPage = () => {
                 <Footer />
                 </footer>
             </div> }
-        {/* <Del bool={false}/> */}
+        <Del bool={false}/>
         </Fragment>
     );
 };
