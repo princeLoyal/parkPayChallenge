@@ -11,9 +11,9 @@ const Backdrop = (props) => {
 const ModalOverlay = (props) => {
   return (
     <div className={classes.modal}>
-      <div className={classes.content}>
+      <div className={`${classes.content} ${props.styles}`}>
           <div className={classes['div-1']}>
-            <span><img src={backArrow} alt='Back'/></span>
+           { props.header && <span onClick={() => props.onClose(false)}><img src={backArrow} alt='Back'/></span>}
             <span>{props.header}</span>
          </div>
          <div className={classes['div-2']}>
@@ -27,11 +27,12 @@ const ModalOverlay = (props) => {
 const portalElement = document.getElementById('overlays');
 
 const Modal = (props) => {
+  const styles = props.className;
   return (
     <Fragment>
       {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElement)}
       {ReactDOM.createPortal(
-        <ModalOverlay header={props.header}>{props.children}</ModalOverlay>,
+        <ModalOverlay header={props.header} styles={styles} onClose={props.onClose}>{props.children}</ModalOverlay>,
         portalElement
       )}
     </Fragment>

@@ -9,8 +9,8 @@
   }
  .modal {
     position: fixed;
-    bottom: 0;
-    left:calc(50% - 11rem);
+    bottom: 1rem;
+    left:calc(50% - 10.5rem);
     background-color: white;
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -43,12 +43,15 @@
   }
   .content .div-1 {
     display: flex;
-    gap:30%;
+    gap:40%;
   }
   .content div span:last-child {
     font: 20px;
     line-height: 24px;
     font-family: Arial, Helvetica, sans-serif;
+  }
+  .content div span:first-child {
+    cursor: pointer;
   }
   .content .div-2 {
     padding: 0.5rem 1rem;

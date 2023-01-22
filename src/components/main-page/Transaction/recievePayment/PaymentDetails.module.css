@@ -94,14 +94,34 @@
 }
 .payment-modal {
     display: flex;
-    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
     gap:1rem;
+    padding: 2rem;
 }
 .payment-modal div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5rem;
+}
+.payment-modal div p:first-child{
     border: 1px solid blue;
     padding: 0.5rem;
     border-radius: 3rem;
+    display: flex;
+    justify-content: center;
 }
-.payment-modal div img {
-    width:2rem;
+.payment-modal div p img {
+    width:1rem;
+}
+.payment-modal div p:last-child{
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #0A151E;
+}
+.payment-details-button {
+    width: 90%;
 }

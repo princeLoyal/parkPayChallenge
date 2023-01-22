@@ -14,7 +14,7 @@ import frame from '../../../../picturesAndFiles/Frame 1000000960.png';
 
 import classes from './PaymentDetails.module.css';
 const PaymentDetails = props => {
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
     const [counter, setCounter ] = useState({
         min:30,
         sec:0
@@ -23,14 +23,15 @@ const PaymentDetails = props => {
     useEffect(() => {
         const interval = setTimeout(() => {
             setCounter(prevCount => {
+                if(prevCount.sec === 0 && prevCount.min === 0) {
+                    return prevCount;
+                } 
                 if(prevCount.sec === 0){
                     const newCounter = {
                         min: prevCount.min - 1,
                         sec: 59,
                     }
                     return newCounter;
-                } else if(prevCount.sec === 0 && prevCount.min === 0) {
-                    return prevCount;
                 } else {
                     return {
                         min: prevCount.min,
@@ -44,21 +45,29 @@ const PaymentDetails = props => {
             clearTimeout(interval);
         }
     }, [counter]);
+
+    const shareButtonHandler = bool => {
+        setShowModal(bool);
+    }
     return (
         <Fragment>
-        {showModal && <Modal header='Share'>
+        {showModal && <Modal header='Share' onClose={shareButtonHandler}>
             <div className={classes['payment-modal']}>
                 <div className={classes['payment-modal-div']}>
                     <p><img src={copy2} alt='copy'/></p>
+                    <p>Copy</p>
                 </div>
                 <div className={classes['payment-modal-div']}>
-                <p><img src={whatsapp} alt='whatsapp'/></p>
+                    <p><img src={whatsapp} alt='whatsapp'/></p>
+                    <p>Whatsapp</p>
                 </div>
                 <div className={classes['payment-modal-div']}>
                     <p><img src={telegram} alt='telegram'/></p>
+                    <p>Telegram</p>
                 </div>
                 <div className={classes['payment-modal-div']}>
                 <p><img src={sms} alt='sms'/></p>
+                    <p>DM</p>
                 </div>
             </div>
             </Modal>}
@@ -98,9 +107,12 @@ const PaymentDetails = props => {
                 <div className={classes['payment-3-div']}>
                     <p><img src={frame} alt='frame'/></p>
                     <p>Account expires in<span>{counter.min}.{counter.sec}</span></p>
-                    <Button>
+                    { props.type === 'recieve' &&   <Button onClick={() => shareButtonHandler(true)} className={classes['payment-details-button']}>
                         Share
-                    </Button>
+                    </Button> }
+                    { props.type === 'make' &&   <Button onClick={() => shareButtonHandler(true)} className={classes['payment-details-button']}>
+                        I've completed the payment
+                    </Button> }
                     <button className={classes['payment-button']}>
                         Cancel
                     </button>

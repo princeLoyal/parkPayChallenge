@@ -43,6 +43,24 @@ const Transaction = () => {
             time: '08:59',
             type: 'credit'
         },
+        {
+            name: 'Michael Afolabi',
+            bank: 'First Bank of Nigeria',
+            accountNumber: 'XXXXXXXXXXX23455',
+            amount: '+2,000',
+            date: 'Sun, 13 Dec 2022',
+            time: '08:59',
+            type: 'credit'
+        },
+        {
+            name: 'Stephen Drogba',
+            bank: 'First Bank of Nigeria',
+            accountNumber: 'XXXXXXXXXXX23455',
+            amount: '-2,000',
+            date: 'Sun, 13 Dec 2022',
+            time: '08:59',
+            type: 'debit'
+        },
     ];
     return (
         <Fragment>

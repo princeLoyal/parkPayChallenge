@@ -5,9 +5,9 @@ import Input from '../../../UI/Input';
 import PaymentDetails from './PaymentDetails';
 
 import close from '../../../../picturesAndFiles/close buttom sheet modal icon.png'
-import classes from './RecievePayment.module.css';
+import classes from './HandlePayment.module.css';
 
-const RecievePayment = props => {
+const HandlePayment = props => {
     const [showPaymentDetails, setShowPaymentDetails] = useState(false);
     
     const showPaymentDetailsHandler = bool => {
@@ -23,7 +23,8 @@ const RecievePayment = props => {
         { !showPaymentDetails && <div className={classes['payment-div']}>
             <div className={classes['payment-1-div']}>
                 <div>
-                    <p>Recieve payment</p>
+                   { props.type === 'recieve' && <p>Recieve payment</p>}
+                   { props.type === 'make' && <p>Make payment</p>}
                     <p>Enter amount below</p>
                 </div>
                 <p className={classes['payment-1-div-p']}
@@ -49,8 +50,9 @@ const RecievePayment = props => {
                 </form>
             </div>
         </div> }
-        {showPaymentDetails && <PaymentDetails showPayment={showPaymentDetailsHandler}/>}
-         </Fragment>
+        {showPaymentDetails && props.type === 'recieve' && <PaymentDetails showPayment={showPaymentDetailsHandler} type='recieve'/>}
+        {showPaymentDetails && props.type === 'make' && <PaymentDetails showPayment={showPaymentDetailsHandler} type='make'/>}
+        </Fragment>
     );
 };
-export default RecievePayment;
+export default HandlePayment;
