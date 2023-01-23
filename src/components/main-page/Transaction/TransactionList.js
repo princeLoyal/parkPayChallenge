@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import credit from '../../../picturesAndFiles/mdi_database-arrow-down-outline.png';
-import debit from '../../../picturesAndFiles/mdi_database-arrow-up-outline.png';
+import credit from '../../../assests/mdi_database-arrow-down-outline.png';
+import debit from '../../../assests/mdi_database-arrow-up-outline.png';
 import classes from './TransactionList.module.css';
 const TransactionList = props => {
    return (

@@ -3,8 +3,8 @@ import { Fragment, useState } from 'react';
 import Button from '../../UI/Button';
 import Input from '../../UI/Input';
 
-import close from '../../../picturesAndFiles/close buttom sheet modal icon.png';
-import bank from '../../../picturesAndFiles/ph_bank.png';
+import close from '../../../assests/close buttom sheet modal icon.png';
+import bank from '../../../assests/ph_bank.png';
 import classes from './Withdraw.module.css';
 
 const Withdraw = props => {

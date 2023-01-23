@@ -1,11 +1,12 @@
 import { Fragment } from 'react';
 import TransactionList from './TransactionList';
 
-import transfer from '../../../picturesAndFiles/mingcute_transfer-3-line.png';
-import card from '../../../picturesAndFiles/ph_credit-card.png';
+import transfer from '../../../assests/mingcute_transfer-3-line.png';
+import card from '../../../assests/ph_credit-card.png';
 
 import classes from './Transaction.module.css';
 const Transaction = props => {
+
     const dummyTransactions = [
         {
             name: 'Thompson Onuoha',
@@ -62,6 +63,9 @@ const Transaction = props => {
             type: 'debit'
         },
     ];
+    const showWithdraw = bool => {
+        props.showWithdraw(true);
+    }
     return (
         <Fragment>
             <div className={classes.transaction}>
@@ -72,7 +76,7 @@ const Transaction = props => {
                             <span className={classes.fSpan}><img src={transfer} alt='transfer' width='30' /></span>
                             <span className={classes.sSpan}>Payment</span>
                         </div>
-                        <div>
+                        <div onClick={() => showWithdraw(true)}>
                              <span className={classes.fSpan}><img src={card} alt='transfer' width='30' /></span>
                              <span className={classes.sSpan}>Withdraw</span>
                         </div>

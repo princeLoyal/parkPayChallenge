@@ -4,7 +4,7 @@ import Button from '../../../UI/Button';
 import Input from '../../../UI/Input';
 import PaymentDetails from './PaymentDetails';
 
-import close from '../../../../picturesAndFiles/close buttom sheet modal icon.png'
+import close from '../../../../assests/close buttom sheet modal icon.png'
 import classes from './HandlePayment.module.css';
 
 const HandlePayment = props => {

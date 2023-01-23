@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
-import home from '../../picturesAndFiles/majesticons_home-analytics.png';
-import transaction from '../../picturesAndFiles/grommet-icons_transaction.png';
-import profile from '../../picturesAndFiles/iconoir_profile-circled.png';
+import home from '../../assests/majesticons_home-analytics.png';
+import transaction from '../../assests/grommet-icons_transaction.png';
+import profile from '../../assests/iconoir_profile-circled.png';
 import classes from './Footer.module.css';
 const Footer = () => {
     return (

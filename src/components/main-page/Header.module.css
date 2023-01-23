@@ -32,7 +32,7 @@
   }
 .header-secondDiv {
     padding: 1rem;
-    background-image: url('../../picturesAndFiles/Lines.png');
+    background-image: url('../../assests/Lines.png');
     background-size: 200%;
 } 
 .header-secondDiv p:nth-child(1){

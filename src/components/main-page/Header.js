@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import classes from './Header.module.css';
-import wavyHand from '../../picturesAndFiles/mdi_hand-wave-outline.png';
-import hiddenEye from '../../picturesAndFiles/Eye\,\ Hidden.png';
-import notificationBell from '../../picturesAndFiles/clarity_notification-outline-badged.png';
+import wavyHand from '../../assests/mdi_hand-wave-outline.png';
+import hiddenEye from '../../assests/Eye\,\ Hidden.png';
+import notificationBell from '../../assests/clarity_notification-outline-badged.png';
 const Header = () => {
     const weekDays = ['Monday', 'Tuesday', 'Wednessday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     const months = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

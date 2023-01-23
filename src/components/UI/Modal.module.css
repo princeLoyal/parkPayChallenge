@@ -39,7 +39,7 @@
     padding: 0.5rem 0.5rem 1rem;
   }
   .content div span:first-child img{
-     width: 1.2rem;
+     width: 1.5rem;
   }
   .content .div-1 {
     display: flex;
@@ -52,6 +52,7 @@
   }
   .content div span:first-child {
     cursor: pointer;
+    
   }
   .content .div-2 {
     padding: 0.5rem 1rem;

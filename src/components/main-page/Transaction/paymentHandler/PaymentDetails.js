@@ -2,14 +2,14 @@ import { useState, useEffect, Fragment } from 'react';
 
 import Button from '../../../UI/Button';
 import Modal from '../../../UI/Modal';
-import copy2 from '../../../../picturesAndFiles/file_copy-1.png';
-import whatsapp from '../../../../picturesAndFiles/logos_whatsapp-icon.png';
-import telegram from '../../../../picturesAndFiles/logos_telegram.png';
-import sms from '../../../../picturesAndFiles/sms.png';
+import copy2 from '../../../../assests/file_copy-1.png';
+import whatsapp from '../../../../assests/logos_whatsapp-icon.png';
+import telegram from '../../../../assests/logos_telegram.png';
+import sms from '../../../../assests/sms.png';
 
-import copy from '../../../../picturesAndFiles/file_copy.png';
-import close from '../../../../picturesAndFiles/close buttom sheet modal icon.png';
-import frame from '../../../../picturesAndFiles/Frame 1000000960.png';
+import copy from '../../../../assests/file_copy.png';
+import close from '../../../../assests/close buttom sheet modal icon.png';
+import frame from '../../../../assests/Frame 1000000960.png';
 
 
 import classes from './PaymentDetails.module.css';

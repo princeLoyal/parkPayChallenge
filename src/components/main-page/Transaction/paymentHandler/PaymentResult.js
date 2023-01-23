@@ -2,8 +2,8 @@ import classes from './PaymentResult.module.css';
 import Modal from '../../../UI/Modal';
 import Button from '../../../UI/Button';
 
-import failed from '../../../../picturesAndFiles/Frame 1000001594.png';
-import success from '../../../../picturesAndFiles/Wallet_Flatline 2.png';
+import failed from '../../../../assests/Frame 1000001594.png';
+import success from '../../../../assests/Wallet_Flatline 2.png';
 
 import close from '../../../../picturesAndFiles/close buttom sheet modal icon.png';
 const PaymentResult = props => {
