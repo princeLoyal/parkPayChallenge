@@ -40,3 +40,7 @@
     line-height: 17px;
     color: #696969;
 }
+.payment-modal {
+    bottom:1rem;
+    left: calc(50% - 11rem);
+}

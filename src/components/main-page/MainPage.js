@@ -45,8 +45,8 @@ const MainPage = () => {
     return (
         <Fragment>
             {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
-        {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} type='recieve'/>}
-        {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} type='make'/>}
+            {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} type='recieve'/>}
+            {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} type='make'/>}
              { showMainPage && <div className={classes.mainDiv}>
                 <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
                     <img src={plus} alt='Add transaction' width='100'/>
@@ -56,7 +56,7 @@ const MainPage = () => {
                 </header>
                 <main>
                 <Transaction showModal={showModalHandler} showWithdraw={showWithdrawHandler}/>
-                { showModal && <Modal onClose={showModalHandler} header='Select Option'>
+                { showModal && <Modal onClose={showModalHandler} header='Select Option' className={classes['payment-modal']}>
                     <div className={classes['modal-div']} onClick={() => clickPaymentHandler(true, 'recieve')}>
                         <p className={classes['modal-div-p']}><img src={recieve} alt='payment Icon'/></p>
                         <div className={classes['modal-div-1']}>
@@ -77,7 +77,7 @@ const MainPage = () => {
                 <Footer />
                 </footer>
             </div> }
-        <Del bool={false}/>
+        {/* <Del bool={false}/> */}
         </Fragment>
     );
 };

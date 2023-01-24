@@ -5,10 +5,10 @@ import Button from '../../../UI/Button';
 import failed from '../../../../assests/Frame 1000001594.png';
 import success from '../../../../assests/Wallet_Flatline 2.png';
 
-import close from '../../../../picturesAndFiles/close buttom sheet modal icon.png';
+import close from '../../../../assests/close buttom sheet modal icon.png';
 const PaymentResult = props => {
     return ( 
-        <Modal>
+        <Modal className={classes['payment-result-modal']}>
             <div className={classes['payment-result-modal']}>
             <p><img src={close} alt='Close'/></p>
             <p>

@@ -16,6 +16,7 @@
     padding: 0.4rem;
     background-color: whitesmoke;
     border-radius: 2rem;
+    left:calc(50% - 10.5rem);
 }
 .transaction-header-div div .fSpan {
     background-color:blue;

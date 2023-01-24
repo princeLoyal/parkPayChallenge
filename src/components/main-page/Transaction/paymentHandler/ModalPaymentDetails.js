@@ -4,7 +4,7 @@ import alert from '../../../../assests/alert-triangle.png';
 import Modal from '../../../UI/Modal';
 const ModalPaymentDetails = props => {
     return(
-       <Modal>
+       <Modal className={classes['modal-payment-details']}>
             <div className={classes['modal-payment-details-div']}>
                 <p>
                     <span>

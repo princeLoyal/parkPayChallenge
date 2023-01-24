@@ -10,8 +10,8 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
   return (
-    <div className={classes.modal}>
-      <div className={`${classes.content} ${props.styles}`}>
+    <div className={`${classes.modal} ${props.styles}`}>
+      <div className={`${classes.content}`}>
           <div className={classes['div-1']}>
            { props.header && <span onClick={() => props.onClose(false)}><img src={backArrow} alt='Back'/></span>}
             <span>{props.header}</span>

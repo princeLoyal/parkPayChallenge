@@ -47,3 +47,8 @@
     background-color: #EE0A18;
     border-color: #EE0A18;
 }
+.payment-result-modal {
+    width:20rem;
+    bottom: calc(10%);
+    left: calc(9% - 0.5rem);
+}

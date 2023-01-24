@@ -2,6 +2,8 @@ import { useState, useEffect, Fragment } from 'react';
 
 import Button from '../../../UI/Button';
 import Modal from '../../../UI/Modal';
+import ModalResult from './PaymentResult';
+
 import copy2 from '../../../../assests/file_copy-1.png';
 import whatsapp from '../../../../assests/logos_whatsapp-icon.png';
 import telegram from '../../../../assests/logos_telegram.png';
@@ -14,29 +16,27 @@ import frame from '../../../../assests/Frame 1000000960.png';
 
 import classes from './PaymentDetails.module.css';
 const PaymentDetails = props => {
+    const [showResultModal, setShowResultModal] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [counter, setCounter ] = useState({
-        min:30,
-        sec:0
-    });
+    const [counter, setCounter ] = useState(1);
+    const [resultBool, setResultBool] = useState(false);
 
     useEffect(() => {
         const interval = setTimeout(() => {
-            setCounter(prevCount => {
-                if(prevCount.sec === 0 && prevCount.min === 0) {
-                    return prevCount;
-                } 
-                if(prevCount.sec === 0){
-                    const newCounter = {
-                        min: prevCount.min - 1,
-                        sec: 59,
-                    }
-                    return newCounter;
+            if(counter === 0) {
+                const bool = Math.floor(Math.random() * 2);
+                if(bool === 0){
+                    setResultBool(false);
                 } else {
-                    return {
-                        min: prevCount.min,
-                        sec: prevCount.sec - 1,
-                    }
+                    setResultBool(true);
+                }
+                setShowResultModal(true);
+            }
+            setCounter(prevCount => {
+                if(prevCount === 0) {
+                    return prevCount
+                } else {
+                    return prevCount - 1
                 }
             });
         }, 1000);
@@ -51,7 +51,8 @@ const PaymentDetails = props => {
     }
     return (
         <Fragment>
-        {showModal && <Modal header='Share' onClose={shareButtonHandler}>
+            {showResultModal && <ModalResult bool={resultBool}/>}
+        {showModal && <Modal header='Share' onClose={shareButtonHandler} className={classes['payment-details-modal']}>
             <div className={classes['payment-modal']}>
                 <div className={classes['payment-modal-div']}>
                     <p><img src={copy2} alt='copy'/></p>
@@ -106,7 +107,7 @@ const PaymentDetails = props => {
                 </div>
                 <div className={classes['payment-3-div']}>
                     <p><img src={frame} alt='frame'/></p>
-                    <p>Account expires in<span>{counter.min}.{counter.sec}</span></p>
+                    <p>Account expires in<span>{counter}</span></p>
                     { props.type === 'recieve' &&   <Button onClick={() => shareButtonHandler(true)} className={classes['payment-details-button']}>
                         Share
                     </Button> }

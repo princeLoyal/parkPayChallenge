@@ -125,3 +125,7 @@
 .payment-details-button {
     width: 90%;
 }
+.payment-details-modal {
+    bottom:0;
+    left:calc(50% - 10.5rem);
+}
