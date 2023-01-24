@@ -18,7 +18,7 @@ import classes from './PaymentDetails.module.css';
 const PaymentDetails = props => {
     const [showResultModal, setShowResultModal] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [counter, setCounter ] = useState(1);
+    const [counter, setCounter ] = useState(10);
     const [resultBool, setResultBool] = useState(false);
 
     useEffect(() => {
@@ -107,7 +107,7 @@ const PaymentDetails = props => {
                 </div>
                 <div className={classes['payment-3-div']}>
                     <p><img src={frame} alt='frame'/></p>
-                    <p>Account expires in<span>{counter}</span></p>
+                    <p>Account expires in<span>{counter}:00</span></p>
                     { props.type === 'recieve' &&   <Button onClick={() => shareButtonHandler(true)} className={classes['payment-details-button']}>
                         Share
                     </Button> }
