@@ -3,6 +3,7 @@ import { useState, useEffect, Fragment } from 'react';
 import Button from '../../../UI/Button';
 import Modal from '../../../UI/Modal';
 import ModalResult from './PaymentResult';
+import CancelModal from '../paymentHandler/ModalPaymentDetails';
 
 import copy2 from '../../../../assests/file_copy-1.png';
 import whatsapp from '../../../../assests/logos_whatsapp-icon.png';
@@ -20,6 +21,7 @@ const PaymentDetails = props => {
     const [showModal, setShowModal] = useState(false);
     const [counter, setCounter ] = useState(10);
     const [resultBool, setResultBool] = useState(false);
+    const [showCancelModal, setShowCancelModal] = useState(false);
 
     useEffect(() => {
         const interval = setTimeout(() => {
@@ -56,10 +58,14 @@ const PaymentDetails = props => {
     const goDashBoardHandler = () => {
         props.onClose();
     }
+    const cancelClickHandler = bool => {
+        setShowCancelModal(bool);
+    }
     return (
         <Fragment>
-            {showResultModal && <ModalResult bool={resultBool} onClose={retryHandler} onClickDashBoard={goDashBoardHandler}/>}
-        {showModal && <Modal header='Share' onClose={shareButtonHandler} className={classes['payment-details-modal']}>
+            {showCancelModal && <CancelModal onClose={cancelClickHandler} onCancel={props.onCancel}/>}
+            {showResultModal && !showCancelModal && <ModalResult bool={resultBool} onClose={retryHandler} onClickDashBoard={goDashBoardHandler}/>}
+            {showModal && <Modal header='Share' onClose={shareButtonHandler} className={classes['payment-details-modal']} >
             <div className={classes['payment-modal']}>
                 <div className={classes['payment-modal-div']}>
                     <p><img src={copy2} alt='copy'/></p>
@@ -121,7 +127,7 @@ const PaymentDetails = props => {
                     { props.type === 'make' &&   <Button onClick={() => shareButtonHandler()} className={classes['payment-details-button']}>
                         I've completed the payment
                     </Button> }
-                    <button className={classes['payment-button']}>
+                    <button className={classes['payment-button']} onClick={() => cancelClickHandler(true)}>
                         Cancel
                     </button>
                 </div>

@@ -91,6 +91,7 @@
     border: none;
     background: transparent;
     margin: 1rem;
+    cursor: pointer;
 }
 .payment-modal {
     display: flex;

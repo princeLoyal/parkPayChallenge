@@ -21,6 +21,9 @@ const HandlePayment = props => {
     const onCloseHandler = () => {
         props.dashBoard();
     }
+    const cancelHandler = () => {
+        setShowPaymentDetails(false);
+    }
     return (
         <Fragment>
         { !showPaymentDetails && <div className={classes['payment-div']}>
@@ -53,8 +56,8 @@ const HandlePayment = props => {
                 </form>
             </div>
         </div> }
-        {showPaymentDetails && props.type === 'recieve' && <PaymentDetails showPayment={showPaymentDetailsHandler} type='recieve' onClose={onCloseHandler}/>}
-        {showPaymentDetails && props.type === 'make' && <PaymentDetails showPayment={showPaymentDetailsHandler} type='make' onClose={onCloseHandler}/>}
+        {showPaymentDetails && props.type === 'recieve' && <PaymentDetails showPayment={showPaymentDetailsHandler} type='recieve' onClose={onCloseHandler} onCancel={cancelHandler}/>}
+        {showPaymentDetails && props.type === 'make' && <PaymentDetails showPayment={showPaymentDetailsHandler} type='make' onClose={onCloseHandler} onCancel={cancelHandler}/>}
         </Fragment>
     );
 };

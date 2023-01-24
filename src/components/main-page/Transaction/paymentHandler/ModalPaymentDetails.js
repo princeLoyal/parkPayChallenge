@@ -18,10 +18,10 @@ const ModalPaymentDetails = props => {
                     <span>Do you want to cancel this</span>
                     <span>transaction</span>
                 </p>
-                <div><button>
+                <div><button onClick={() => props.onClose(false)}>
                     No, continue
                 </button>
-                <button>
+                <button  onClick={() => props.onCancel(false)}>
                     Yes, Cancel
                 </button></div>
             </div>
