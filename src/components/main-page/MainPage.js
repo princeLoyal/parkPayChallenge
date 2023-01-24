@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import plus from '../../assests/Frame 1000001199.png';
 import recieve from '../../assests/mingcute_transfer-3-line.png';
 import make from '../../assests/carbon_send-alt.png';
-import Del from './Transaction/Withdraw';
+import Del from './Transaction/paymentHandler/ModalPaymentDetails';
 
 import Header from "./Header";
 import Transaction from "./Transaction/Transaction";
@@ -44,7 +44,7 @@ const MainPage = () => {
 
     return (
         <Fragment>
-            {showWithdraw && <Withdraw />}
+            {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
         {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} type='recieve'/>}
         {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} type='make'/>}
              { showMainPage && <div className={classes.mainDiv}>
@@ -77,7 +77,7 @@ const MainPage = () => {
                 <Footer />
                 </footer>
             </div> }
-        {/* <Del bool={false}/> */}
+        <Del bool={false}/>
         </Fragment>
     );
 };

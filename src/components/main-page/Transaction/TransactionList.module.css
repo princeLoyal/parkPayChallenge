@@ -15,6 +15,7 @@
     background-color: transparent;
     color:#123CAA;
     line-height: 19px;
+    cursor:pointer;
 }
 .transactionList-main ul{
     margin:0;

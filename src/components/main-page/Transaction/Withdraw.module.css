@@ -49,3 +49,18 @@
 .withdraw-input {
     height: 5rem;
 }
+.withdraw-acc-num {
+    background: #123CAA;
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 89%;
+    margin: auto;
+    display: flex;
+    gap: 0.8rem;
+    padding-left: 1rem;
+    color: white;
+    font-size: 18px;
+}
+.withdraw-acc-num img {
+    width:1.5rem;
+}

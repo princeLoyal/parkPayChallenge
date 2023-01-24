@@ -1,0 +1,22 @@
+.modal-payment-details-div {
+    font-family: 'Helvetica Neue';
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+} 
+.modal-payment-details-div p:nth-child(1) {
+    display:flex;
+    gap:0.5rem;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #0A0A0A;
+}
+.modal-payment-details-div p:nth-child(2) {
+    font-size: 14px;
+    line-height: 22px;
+    color: #424242;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

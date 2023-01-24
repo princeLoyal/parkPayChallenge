@@ -1,22 +1,36 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useRef } from 'react';
 
 import Button from '../../UI/Button';
 import Input from '../../UI/Input';
 
 import close from '../../../assests/close buttom sheet modal icon.png';
-import bank from '../../../assests/ph_bank.png';
+import correct from '../../../assests/Group 13 Copy 2.png';
 import classes from './Withdraw.module.css';
 
 const Withdraw = props => {
-    const formSubmitHandler = () => {
+    const [validForm, setValidForm] = useState(false);
+    const [validAccNum, setValidAccNum] = useState(false);
+    const bank = useRef('');
+    const accNum = useRef('');
+    const amount = useRef('');
+    const remarks = useRef('');
 
+    const accNumValidation = () => {
+        alert('jhvgh');
+    }
+
+    const formSubmitHandler = event => {
+        event.preventDefault();
+
+        setValidForm(true);
     }
     return (
         <Fragment>
         <div className={classes['withdraw-div']}>
             <div className={classes['withdraw-1-div']}>
                 <div>
-                    <p>Send Money</p>
+                { !validForm && <p>Send Money</p>}
+                { validForm && <p>Withdraw</p>}
                     <p>Transfer to Bank Account</p>
                 </div>
                 <p className={classes['withdraw-1-div-p']}
@@ -30,26 +44,37 @@ const Withdraw = props => {
                     id='bank'
                     type='text'
                     placeholder='Select Bank'
-                    >gfgdxf</Input>
+                    ref={bank}
+                    />
                     <label htmlFor='account number'>Account Number</label>
                     <Input 
                     id='account number'
                     type='text'
                     placeholder='Enter account number'
+                    ref={accNum}
+                    onBlur={accNumValidation}
                     />
+                    {validAccNum && <p className={classes['withdraw-acc-num']}>
+                        <span><img src={correct}/></span> <span>Your Account Name</span>
+                    </p>}
                     <label htmlFor='amount'>Amount</label>
                     <Input 
                     id='amount'
                     type='number'
                     placeholder='&#8358; Enter Amount'
+                    ref={amount}
                     />
                     <label htmlFor='remarks'>Remarks</label>
                     <Input 
                     id='remarks'
                     type='text'
                     placeholder="What's this for (Optional)"
+                    ref={remarks}
                     />
-                    <Button type='submit' className={classes['withdraw-button']}>Next</Button>
+                    <Button type='submit' className={classes['withdraw-button']}>
+                        {!validForm && <p>Next</p>}
+                        {validForm && <p>Withdraw</p>}
+                    </Button>
                 </form>
             </div>
         </div>

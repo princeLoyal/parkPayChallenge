@@ -8,6 +8,7 @@
     border-radius: 3rem;
     background-color: lightblue;
     padding: 0.7rem;
+    cursor:pointer;
 }
 .transaction-header-div div {
     width: 50%;
