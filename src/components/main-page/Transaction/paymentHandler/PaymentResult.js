@@ -10,7 +10,7 @@ const PaymentResult = props => {
     return ( 
         <Modal className={classes['payment-result-modal']}>
             <div className={classes['payment-result-modal']}>
-            <p><img src={close} alt='Close'/></p>
+            <p onClick={() => props.onClose()}><img src={close} alt='Close'/></p>
             <p>
                 <img src={success} alt='Succesfull!'/>
                 { !props.bool && <img src={failed} />}
