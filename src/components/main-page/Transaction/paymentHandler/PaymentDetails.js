@@ -49,9 +49,16 @@ const PaymentDetails = props => {
     const shareButtonHandler = bool => {
         setShowModal(bool);
     }
+    const retryHandler = () => {
+        setCounter(10);
+        setShowResultModal(false);
+    }
+    const goDashBoardHandler = () => {
+        props.onClose();
+    }
     return (
         <Fragment>
-            {showResultModal && <ModalResult bool={resultBool}/>}
+            {showResultModal && <ModalResult bool={resultBool} onClose={retryHandler} onClickDashBoard={goDashBoardHandler}/>}
         {showModal && <Modal header='Share' onClose={shareButtonHandler} className={classes['payment-details-modal']}>
             <div className={classes['payment-modal']}>
                 <div className={classes['payment-modal-div']}>

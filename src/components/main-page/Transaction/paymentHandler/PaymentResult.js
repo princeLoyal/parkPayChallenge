@@ -25,7 +25,11 @@ const PaymentResult = props => {
                 Payment transaction was not 
                 <span>sucessful. Please try again</span>     
             </p>}
-            <Button className={`${classes['payment-result-modal-button']} ${!props.bool && classes.failed}`}>
+            <Button 
+            className={`${classes['payment-result-modal-button']} 
+            ${!props.bool && classes.failed}`}
+            onClick = {!props.bool? () => props.onClose() : () => props.onClickDashBoard()}
+            >
                { props.bool && <p>Go to dashboard</p>}
                {!props.bool && <p>Retry</p>}
             </Button>

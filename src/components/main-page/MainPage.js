@@ -41,12 +41,14 @@ const MainPage = () => {
             });
         };
     };
-
+    const goDashBoardHandler = () => {
+        setShowMainPage(true);
+    }
     return (
         <Fragment>
             {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
-            {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} type='recieve'/>}
-            {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} type='make'/>}
+            {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='recieve'/>}
+            {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='make'/>}
              { showMainPage && <div className={classes.mainDiv}>
                 <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
                     <img src={plus} alt='Add transaction' width='100'/>
