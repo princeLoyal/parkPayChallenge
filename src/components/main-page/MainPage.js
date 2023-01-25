@@ -15,7 +15,7 @@ import Withdraw from '../main-page/Transaction/Withdraw';
 const MainPage = () => {
     const [showWithdraw, setShowWithdraw] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [showMainPage, setShowMainPage] = useState(false);
+    const [showMainPage, setShowMainPage] = useState(true);
     const [showHandlePayment, setShowHandlePayment] = useState({ bool: false, type: ''});
     const showModalHandler = bool => {
         setShowModal(bool);
