@@ -21,3 +21,61 @@
     line-height: 17px;
     color: #374151;
 }
+.fullTransaction-nav {
+    width:20rem;
+    margin:1rem auto;
+    display: flex;
+    border: 1px solid #3a12af;
+    border-radius: 8px;
+}
+.fullTransaction-nav button {
+    border:none;
+    background: transparent;
+    border-right:1px solid #123CAA;
+    padding: 1rem;
+    width:10rem;
+    text-align: center;
+}
+.fullTransaction-nav button:last-child {
+    border-right: none;
+}
+.fullTransaction-ul {
+    margin: 0;
+    list-style:none;
+}
+.fullTransaction-ul li {
+    font-family:sans-serif;
+    font-weight: 600;
+    color:#6B7280;
+    display: flex;
+    justify-content:space-between;
+    border: 1px solid hsl(220, 50%, 90%);
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    line-height: 1.5rem;
+    font-size: 3.5vw;
+}
+.transactionList-main-li-div-1 {
+    padding-left: 0.2rem;
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+.transactionList-main-li-div-1-1 p{
+    display: flex;
+    border: 2px solid #2AC607;
+    border-radius: 2rem;
+    padding: 5px;
+    position: relative;
+    top: 1rem;
+}
+.transactionList-main-div-p {
+   font-weight: bold;
+   color: #1f1f1f;
+}
+@media only screen and (min-width: 500px) {
+    .fullTransaction-ul li {
+        font-size: 1rem;
+   }
+}

@@ -7,11 +7,10 @@ import debit from '../../../../assests/mdi_database-arrow-up-outline.png';
 import classes from './FullTransactionList.module.css';
 const FullTransactionList = props => {
     const list1 = props.transactions;
-    console.log(list1)
     const [type, setType] = useState('all');
     const [list, setList] = useState(list1);
 
-    const filterTransctions = type => {
+    const filterTransctions = () => {
         const filter = props.transactions.filter( transaction => {
             if(transaction.type === type){
                 return true;
@@ -22,6 +21,11 @@ const FullTransactionList = props => {
         });
         setList(filter);
     }
+
+    const typeHandler = type => {
+        setType(type);
+        filterTransctions();
+    }
     return (
         <Fragment>
             <div className={classes['fullTransaction-div']}>
@@ -31,12 +35,12 @@ const FullTransactionList = props => {
                     <p>Transactions on your Alee wallet</p>
                 </div>
             </div>
-            <nav>
-                <div>All</div>
-                <div>Credit</div>
-                <div>Debit</div>
+            <nav className={classes['fullTransaction-nav']}>
+                <button onClick={() => typeHandler('all')}>All</button>
+                <button onClick={() => typeHandler('credit')}>Credit</button>
+                <button onClick={() => typeHandler('debit')}>Debit</button>
             </nav>
-            <ul>
+            <ul  className={classes['fullTransaction-ul']}>
                {
                   list.map( (transaction, id) => 
                      <li key={id}>
