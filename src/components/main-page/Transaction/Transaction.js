@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import TransactionList from './TransactionList';
-import Hel from './Full-Transaction-List/FullTransactionList';
+import FullTransactionList from './Full-Transaction-List/FullTransactionList';
 
 import transfer from '../../../assests/mingcute_transfer-3-line.png';
 import card from '../../../assests/ph_credit-card.png';
@@ -70,6 +70,7 @@ const Transaction = props => {
     }
     return (
         <Fragment>
+           <FullTransactionList transactions={dummyTransactions}/>
             <div className={classes.transaction}>
                 <header className={classes['transaction-header']}>
                     <h4>Quick Transaction</h4>
