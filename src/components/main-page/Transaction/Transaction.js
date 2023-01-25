@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import TransactionList from './TransactionList';
 import Hel from './Full-Transaction-List/FullTransactionList';
 
@@ -7,6 +7,7 @@ import card from '../../../assests/ph_credit-card.png';
 
 import classes from './Transaction.module.css';
 const Transaction = props => {
+   const [showFullList, setShowFullList] = useState(false);
 
     const dummyTransactions = [
         {
