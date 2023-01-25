@@ -13,7 +13,7 @@ import HandlePayment from "./Transaction/paymentHandler/HandlePayment";
 import Withdraw from '../main-page/Transaction/Withdraw';
 
 const MainPage = () => {
-    const [showFullTranList, setShowFullTranList] = useState(true);
+    const [showFullTranList, setShowFullTranList] = useState(false);
     const [showWithdraw, setShowWithdraw] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [showMainPage, setShowMainPage] = useState(true);
@@ -46,7 +46,7 @@ const MainPage = () => {
         setShowMainPage(true);
     }
     const showFullTranListHandler = bool => {
-        setShowMainPage(bool);
+        setShowFullTranList(bool);
     }
     return (
         <Fragment>
