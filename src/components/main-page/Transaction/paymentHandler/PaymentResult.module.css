@@ -52,3 +52,9 @@
     bottom: calc(10%);
     left: calc(9% - 0.5rem);
 }
+@media (min-width: 600px) {
+    .payment-result-modal {
+      width: 35rem;
+      left: calc(50% - 18rem);
+    }
+  }

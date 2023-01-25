@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import plus from '../../assests/Frame 1000001199.png';
 import recieve from '../../assests/mingcute_transfer-3-line.png';
 import make from '../../assests/carbon_send-alt.png';
-import Del from './Transaction/paymentHandler/ModalPaymentDetails';
+import Del from './Transaction/Full-Transaction-List/FullTransactionList';
 
 import Header from "./Header";
 import Transaction from "./Transaction/Transaction";

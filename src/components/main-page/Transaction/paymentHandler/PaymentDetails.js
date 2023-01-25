@@ -35,6 +35,9 @@ const PaymentDetails = props => {
                 setShowResultModal(true);
             }
             setCounter(prevCount => {
+                if(showCancelModal === true){
+                    return prevCount;
+                }
                 if(prevCount === 0) {
                     return prevCount
                 } else {
@@ -59,6 +62,7 @@ const PaymentDetails = props => {
         props.onClose();
     }
     const cancelClickHandler = bool => {
+        setCounter(prevCount => prevCount - 1);
         setShowCancelModal(bool);
     }
     return (

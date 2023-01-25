@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import TransactionList from './TransactionList';
+import Hel from './Full-Transaction-List/FullTransactionList';
 
 import transfer from '../../../assests/mingcute_transfer-3-line.png';
 import card from '../../../assests/ph_credit-card.png';
@@ -68,7 +69,8 @@ const Transaction = props => {
     }
     return (
         <Fragment>
-            <div className={classes.transaction}>
+            <Hel transactions={dummyTransactions}/>
+            {/* <div className={classes.transaction}>
                 <header className={classes['transaction-header']}>
                     <h4>Quick Transaction</h4>
                     <div className={classes['transaction-header-div']}>
@@ -83,7 +85,7 @@ const Transaction = props => {
                     </div>
                 </header>
                 <TransactionList transactions={dummyTransactions}/>
-            </div>
+            </div> */}
         </Fragment>
     );
 };

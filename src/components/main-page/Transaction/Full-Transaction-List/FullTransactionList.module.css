@@ -1,0 +1,23 @@
+.fullTransaction-div {
+    display:flex;
+    background: rgba(207, 217, 242, 0.32);
+    align-items: center;
+    gap:1rem;
+    padding: 1rem 0.5rem;
+}
+.fullTransaction-div img {
+    width :20px;
+}
+.fullTransaction-div div {
+    font-family: 'Helvetica Neue';
+}
+.fullTransaction-div div p:nth-child(1) {
+    font-weight: 700;
+    line-height: 20px;
+    color: #1F2937;
+}
+.fullTransaction-div div p:nth-child(2) {
+    font-size: 14px;
+    line-height: 17px;
+    color: #374151;
+}
