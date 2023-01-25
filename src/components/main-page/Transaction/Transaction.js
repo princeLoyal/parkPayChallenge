@@ -68,9 +68,13 @@ const Transaction = props => {
     const showWithdraw = bool => {
         props.showWithdraw(true);
     }
+    const onShowFullTranList = bool => {
+           setShowFullList(bool);
+           showFullList(bool);
+    }
     return (
         <Fragment>
-           <FullTransactionList transactions={dummyTransactions}/>
+           {showFullList && <FullTransactionList transactions={dummyTransactions}/>}
             <div className={classes.transaction}>
                 <header className={classes['transaction-header']}>
                     <h4>Quick Transaction</h4>
@@ -85,7 +89,7 @@ const Transaction = props => {
                         </div>
                     </div>
                 </header>
-                <TransactionList transactions={dummyTransactions}/>
+                <TransactionList transactions={dummyTransactions} showFullTran={onShowFullTranList}/>
             </div>
         </Fragment>
     );
