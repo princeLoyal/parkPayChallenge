@@ -79,7 +79,7 @@ const MainPage = () => {
                     </div>
                 </Modal>}
                 </main>
-                <footer>
+                <footer className={classes.footer}>
                 <Footer />
                 </footer>
             </div> }
