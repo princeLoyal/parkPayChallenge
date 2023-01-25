@@ -69,8 +69,7 @@ const Transaction = props => {
     }
     return (
         <Fragment>
-            <Hel transactions={dummyTransactions}/>
-            {/* <div className={classes.transaction}>
+            <div className={classes.transaction}>
                 <header className={classes['transaction-header']}>
                     <h4>Quick Transaction</h4>
                     <div className={classes['transaction-header-div']}>
@@ -85,7 +84,7 @@ const Transaction = props => {
                     </div>
                 </header>
                 <TransactionList transactions={dummyTransactions}/>
-            </div> */}
+            </div>
         </Fragment>
     );
 };

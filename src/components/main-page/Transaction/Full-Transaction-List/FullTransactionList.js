@@ -10,7 +10,7 @@ const FullTransactionList = props => {
     const [type, setType] = useState('all');
     const [list, setList] = useState(list1);
 
-    const filterTransctions = () => {
+    const filterTransctions = type => {
         const filter = props.transactions.filter( transaction => {
             if(transaction.type === type){
                 return true;
@@ -23,8 +23,8 @@ const FullTransactionList = props => {
     }
 
     const typeHandler = type => {
+        filterTransctions(type);
         setType(type);
-        filterTransctions();
     }
     return (
         <Fragment>
@@ -36,9 +36,9 @@ const FullTransactionList = props => {
                 </div>
             </div>
             <nav className={classes['fullTransaction-nav']}>
-                <button onClick={() => typeHandler('all')}>All</button>
-                <button onClick={() => typeHandler('credit')}>Credit</button>
-                <button onClick={() => typeHandler('debit')}>Debit</button>
+                <button onClick={() => typeHandler('all')} className={type === 'all' && classes['all-focused']}>All</button>
+                <button onClick={() => typeHandler('credit')} className={type === 'credit' && classes['credit-focused']}>Credit</button>
+                <button onClick={() => typeHandler('debit')} className={type === 'debit' && classes['debit-focused']}>Debit</button>
             </nav>
             <ul  className={classes['fullTransaction-ul']}>
                {

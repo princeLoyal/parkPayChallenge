@@ -1,9 +1,13 @@
 .fullTransaction-div {
+    position:sticky;
+    top:0;
     display:flex;
-    background: rgba(207, 217, 242, 0.32);
+    background: rgb(207, 217, 242);
     align-items: center;
     gap:1rem;
     padding: 1rem 0.5rem;
+    margin-top: 1rem;
+    z-index: 1;
 }
 .fullTransaction-div img {
     width :20px;
@@ -22,22 +26,48 @@
     color: #374151;
 }
 .fullTransaction-nav {
+    position: sticky;
+    top:5rem;
     width:20rem;
     margin:1rem auto;
     display: flex;
-    border: 1px solid #3a12af;
     border-radius: 8px;
+    z-index:2;
 }
 .fullTransaction-nav button {
-    border:none;
-    background: transparent;
+    background: white;
     border-right:1px solid #123CAA;
-    padding: 1rem;
+    padding: 0.8rem;
     width:10rem;
     text-align: center;
+    cursor: pointer;
+    color:#123CAA;
+    line-height: 19px;
 }
-.fullTransaction-nav button:last-child {
-    border-right: none;
+.fullTransaction-nav button:nth-child(1) {
+    border:1px solid #123CAA;
+    border-radius: 6px 0 0 6px;
+}
+.fullTransaction-nav button:nth-child(2) {
+    border:1px solid #123CAA;
+}
+.fullTransaction-nav button:nth-child(3) {
+    border: 1px solid #123CAA;
+    border-radius: 0 6px 6px 0;
+}
+.fullTransaction-nav button.all-focused {
+    background: #123CAA;
+    border-radius:6px 0 0 6px;
+    color:white;
+}
+.fullTransaction-nav button.credit-focused {
+    background: #123CAA;
+    color:white;
+}
+.fullTransaction-nav button.debit-focused {
+    background: #123CAA;
+    border-radius:0 6px 6px 0;
+    color:white;
 }
 .fullTransaction-ul {
     margin: 0;
