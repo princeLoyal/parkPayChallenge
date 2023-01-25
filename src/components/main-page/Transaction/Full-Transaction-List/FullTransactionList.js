@@ -29,7 +29,7 @@ const FullTransactionList = props => {
     return (
         <Fragment>
             <div className={classes['fullTransaction-div']}>
-                <p onClick={() => props.onClose(false)><img src={back} alt='back'/></p>
+                <p onClick={() => props.onClose(false)}><img src={back} alt='back'/></p>
                 <div>
                     <p>Transactions</p>
                     <p>Transactions on your Alee wallet</p>
