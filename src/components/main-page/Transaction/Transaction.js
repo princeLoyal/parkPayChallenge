@@ -75,7 +75,7 @@ const Transaction = props => {
     return (
         <Fragment>
            {showFullList && <FullTransactionList transactions={dummyTransactions}/>}
-            <div className={classes.transaction}>
+           {!showFullList &&  <div className={classes.transaction}>
                 <header className={classes['transaction-header']}>
                     <h4>Quick Transaction</h4>
                     <div className={classes['transaction-header-div']}>
@@ -90,7 +90,7 @@ const Transaction = props => {
                     </div>
                 </header>
                 <TransactionList transactions={dummyTransactions} showFullTran={onShowFullTranList}/>
-            </div>
+            </div>}
         </Fragment>
     );
 };
