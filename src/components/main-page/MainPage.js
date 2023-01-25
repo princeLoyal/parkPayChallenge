@@ -15,7 +15,7 @@ import Withdraw from '../main-page/Transaction/Withdraw';
 const MainPage = () => {
     const [showWithdraw, setShowWithdraw] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [showMainPage, setShowMainPage] = useState(true);
+    const [showMainPage, setShowMainPage] = useState(false);
     const [showHandlePayment, setShowHandlePayment] = useState({ bool: false, type: ''});
     const showModalHandler = bool => {
         setShowModal(bool);
@@ -44,6 +44,9 @@ const MainPage = () => {
     const goDashBoardHandler = () => {
         setShowMainPage(true);
     }
+    const showFullTranListHandler = bool => {
+        setShowMainPage(bool);
+    }
     return (
         <Fragment>
             {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
@@ -57,7 +60,7 @@ const MainPage = () => {
                     <Header />
                 </header>
                 <main>
-                <Transaction showModal={showModalHandler} showWithdraw={showWithdrawHandler}/>
+                <Transaction showModal={showModalHandler} showWithdraw={showWithdrawHandler} showFullTran={showFullTranListHandler}/>
                 { showModal && <Modal onClose={showModalHandler} header='Select Option' className={classes['payment-modal']}>
                     <div className={classes['modal-div']} onClick={() => clickPaymentHandler(true, 'recieve')}>
                         <p className={classes['modal-div-p']}><img src={recieve} alt='payment Icon'/></p>
