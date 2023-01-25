@@ -6,6 +6,11 @@
    top: 0;
    z-index: 1;
 }
+.mainDiv .footer {
+   position: sticky;
+   bottom: 0;
+   z-index: 2;
+}
 .imgStyle {
     cursor: pointer;
     position: absolute;
