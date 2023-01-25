@@ -13,6 +13,7 @@ import HandlePayment from "./Transaction/paymentHandler/HandlePayment";
 import Withdraw from '../main-page/Transaction/Withdraw';
 
 const MainPage = () => {
+    const [showFullTranList, setShowFullTranList] = useState(true);
     const [showWithdraw, setShowWithdraw] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [showMainPage, setShowMainPage] = useState(true);
@@ -56,9 +57,9 @@ const MainPage = () => {
                 <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
                     <img src={plus} alt='Add transaction' width='100'/>
                 </p>
-                <header>
+                {!showFullTranList && <header>
                     <Header />
-                </header>
+                </header> }
                 <main>
                 <Transaction showModal={showModalHandler} showWithdraw={showWithdrawHandler} showFullTran={showFullTranListHandler}/>
                 { showModal && <Modal onClose={showModalHandler} header='Select Option' className={classes['payment-modal']}>
