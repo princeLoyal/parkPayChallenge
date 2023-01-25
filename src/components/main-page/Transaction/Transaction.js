@@ -70,7 +70,7 @@ const Transaction = props => {
     }
     const onShowFullTranList = bool => {
            setShowFullList(bool);
-           showFullList(bool);
+           props.showFullTran(bool);
     }
     return (
         <Fragment>
