@@ -54,13 +54,13 @@ const MainPage = () => {
             {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='recieve'/>}
             {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='make'/>}
              
-             { showMainPage && <div className={classes['main-page-div']}>
+             { showMainPage && !showFullTranList && <div className={classes['main-page-div']}>
                 <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
                     <img src={plus} alt='Add transaction' width='100'/>
                 </p>
-                {!showFullTranList && <header>
+                <header>
                     <Header />
-                </header> }
+                </header> 
                 <main>
                 <Transaction showModal={showModalHandler} showWithdraw={showWithdrawHandler} showFullTran={showFullTranListHandler}/>
                 { showModal && <AddTransactionModal onClose={showModalHandler} onClickPayment = {clickPaymentHandler}/>}
@@ -68,7 +68,7 @@ const MainPage = () => {
                 <footer className={classes.footer}>
                 <Footer focus={focusedFooter}/>
                 </footer>
-            </div> }
+            </div> } }
             
         </Fragment>
     );
