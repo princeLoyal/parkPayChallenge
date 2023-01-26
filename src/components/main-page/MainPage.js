@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import plus from '../../assests/Frame 1000001199.png';
 import recieve from '../../assests/mingcute_transfer-3-line.png';
 import make from '../../assests/carbon_send-alt.png';
@@ -13,11 +13,23 @@ import HandlePayment from "./Transaction/paymentHandler/HandlePayment";
 import Withdraw from '../main-page/Transaction/Withdraw';
 
 const MainPage = () => {
+    const [focusedFooter, setFocusedFooter] = useState('home');
     const [showFullTranList, setShowFullTranList] = useState(false);
     const [showWithdraw, setShowWithdraw] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [showMainPage, setShowMainPage] = useState(true);
     const [showHandlePayment, setShowHandlePayment] = useState({ bool: false, type: ''});
+    
+    useEffect(() => {
+        if(showFullTranList === false){
+            setFocusedFooter('home');
+        };
+        if(showFullTranList === true){
+            setFocusedFooter('transaction');
+        }
+        console.log(focusedFooter)
+    }, []);
+    
     const showModalHandler = bool => {
         setShowModal(bool);
     };
@@ -80,7 +92,7 @@ const MainPage = () => {
                 </Modal>}
                 </main>
                 <footer className={classes.footer}>
-                <Footer />
+                <Footer focus={focusedFooter}/>
                 </footer>
             </div> }
         {/* <Del bool={false}/> */}

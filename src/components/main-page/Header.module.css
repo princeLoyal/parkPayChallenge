@@ -1,8 +1,8 @@
 .header-header {
-  position: sticky;
   width: 100%;
   background: #123CAA;
   border-radius: 20px;
+  z-index: 50;
 }
 .header-firstDiv p:nth-child(1){
   padding: 1rem 0 0 1rem;
