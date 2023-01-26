@@ -66,6 +66,7 @@ const MainPage = () => {
                 <Transaction showModal={showModalHandler} showWithdraw={showWithdrawHandler} showFullTran={showFullTranListHandler}/>
                 { showModal && <AddTransactionModal onClose={showModalHandler} onClickPayment = {clickPaymentHandler}/>}
                 </main> </div>}
+                { showFullTranList && <TransactionList />
                 {!showWithdraw && !showHandlePayment.bool && <footer className={classes.footer}>
                 <Footer focus={focusedFooter}/>
                 </footer> }
