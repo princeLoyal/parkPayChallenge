@@ -3,7 +3,7 @@ import plus from '../../assests/Frame 1000001199.png';
 
 import Header from "./Header";
 import Transaction from "./Transaction/Transaction";
-import TransactionList from "./Transaction/TransactionList";
+import TransactionList from "./Transaction/Full-Transaction-List/FullTransactionList";
 import Footer from './Footer';
 import classes from './MainPage.module.css';
 import AddTransactionModal from '../UI/Modals/AddTransactionModal';
