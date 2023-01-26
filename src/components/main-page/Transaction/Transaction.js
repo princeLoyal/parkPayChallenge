@@ -9,62 +9,6 @@ import classes from './Transaction.module.css';
 const Transaction = props => {
    const [showFullList, setShowFullList] = useState(false);
 
-    // const dummyTransactions = [
-    //     {
-    //         name: 'Thompson Onuoha',
-    //         bank: 'First Bank of Nigeria',
-    //         accountNumber: 'XXXXXXXXXXX23455',
-    //         amount: '+200,000',
-    //         date: 'Sun, 13 Dec 2022',
-    //         time: '08:59',
-    //         type: 'credit'
-    //     },
-    //     {
-    //         name: 'Braith Kuku',
-    //         bank: 'First Bank of Nigeria',
-    //         accountNumber: 'XXXXXXXXXXX23455',
-    //         amount: '+2,000',
-    //         date: 'Sun, 13 Dec 2022',
-    //         time: '08:59',
-    //         type: 'credit'
-    //     },
-    //     {
-    //         name: 'Rafeal Leao',
-    //         bank: 'First Bank of Nigeria',
-    //         accountNumber: 'XXXXXXXXXXX23455',
-    //         amount: '-2,000',
-    //         date: 'Sun, 13 Dec 2022',
-    //         time: '08:59',
-    //         type: 'debit'
-    //     },
-    //     {
-    //         name: 'Annette Dove',
-    //         bank: 'First Bank of Nigeria',
-    //         accountNumber: 'XXXXXXXXXXX23455',
-    //         amount: '+2,000',
-    //         date: 'Sun, 13 Dec 2022',
-    //         time: '08:59',
-    //         type: 'credit'
-    //     },
-    //     {
-    //         name: 'Michael Afolabi',
-    //         bank: 'First Bank of Nigeria',
-    //         accountNumber: 'XXXXXXXXXXX23455',
-    //         amount: '+2,000',
-    //         date: 'Sun, 13 Dec 2022',
-    //         time: '08:59',
-    //         type: 'credit'
-    //     },
-    //     {
-    //         name: 'Stephen Drogba',
-    //         bank: 'First Bank of Nigeria',
-    //         accountNumber: 'XXXXXXXXXXX23455',
-    //         amount: '-2,000',
-    //         date: 'Sun, 13 Dec 2022',
-    //         time: '08:59',
-    //         type: 'debit'
-    //     },
-    // ];
     const showWithdraw = bool => {
         props.showWithdraw(true);
     }
