@@ -65,11 +65,11 @@ const MainPage = () => {
                 <main>
                 <Transaction showModal={showModalHandler} showWithdraw={showWithdrawHandler} showFullTran={showFullTranListHandler}/>
                 { showModal && <AddTransactionModal onClose={showModalHandler} onClickPayment = {clickPaymentHandler}/>}
-                </main>
-                <footer className={classes.footer}>
+                </main> }
+                {!showWithdraw && <footer className={classes.footer}>
                 <Footer focus={focusedFooter}/>
-                </footer>
-            </div> } }
+                </footer> }
+            </div> 
             
         </Fragment>
     );
