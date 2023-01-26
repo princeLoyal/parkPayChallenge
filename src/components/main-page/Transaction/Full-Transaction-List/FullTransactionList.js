@@ -12,7 +12,7 @@ const FullTransactionList = props => {
     const [list, setList] = useState(transactions);
 
     const filterTransctions = type => {
-        const filter = props.transactions.filter( transaction => {
+        const filter = transactions.filter( transaction => {
             if(transaction.type === type){
                 return true;
             };
