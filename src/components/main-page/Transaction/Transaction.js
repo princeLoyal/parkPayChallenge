@@ -9,62 +9,62 @@ import classes from './Transaction.module.css';
 const Transaction = props => {
    const [showFullList, setShowFullList] = useState(false);
 
-    const dummyTransactions = [
-        {
-            name: 'Thompson Onuoha',
-            bank: 'First Bank of Nigeria',
-            accountNumber: 'XXXXXXXXXXX23455',
-            amount: '+200,000',
-            date: 'Sun, 13 Dec 2022',
-            time: '08:59',
-            type: 'credit'
-        },
-        {
-            name: 'Braith Kuku',
-            bank: 'First Bank of Nigeria',
-            accountNumber: 'XXXXXXXXXXX23455',
-            amount: '+2,000',
-            date: 'Sun, 13 Dec 2022',
-            time: '08:59',
-            type: 'credit'
-        },
-        {
-            name: 'Rafeal Leao',
-            bank: 'First Bank of Nigeria',
-            accountNumber: 'XXXXXXXXXXX23455',
-            amount: '-2,000',
-            date: 'Sun, 13 Dec 2022',
-            time: '08:59',
-            type: 'debit'
-        },
-        {
-            name: 'Annette Dove',
-            bank: 'First Bank of Nigeria',
-            accountNumber: 'XXXXXXXXXXX23455',
-            amount: '+2,000',
-            date: 'Sun, 13 Dec 2022',
-            time: '08:59',
-            type: 'credit'
-        },
-        {
-            name: 'Michael Afolabi',
-            bank: 'First Bank of Nigeria',
-            accountNumber: 'XXXXXXXXXXX23455',
-            amount: '+2,000',
-            date: 'Sun, 13 Dec 2022',
-            time: '08:59',
-            type: 'credit'
-        },
-        {
-            name: 'Stephen Drogba',
-            bank: 'First Bank of Nigeria',
-            accountNumber: 'XXXXXXXXXXX23455',
-            amount: '-2,000',
-            date: 'Sun, 13 Dec 2022',
-            time: '08:59',
-            type: 'debit'
-        },
-    ];
+    // const dummyTransactions = [
+    //     {
+    //         name: 'Thompson Onuoha',
+    //         bank: 'First Bank of Nigeria',
+    //         accountNumber: 'XXXXXXXXXXX23455',
+    //         amount: '+200,000',
+    //         date: 'Sun, 13 Dec 2022',
+    //         time: '08:59',
+    //         type: 'credit'
+    //     },
+    //     {
+    //         name: 'Braith Kuku',
+    //         bank: 'First Bank of Nigeria',
+    //         accountNumber: 'XXXXXXXXXXX23455',
+    //         amount: '+2,000',
+    //         date: 'Sun, 13 Dec 2022',
+    //         time: '08:59',
+    //         type: 'credit'
+    //     },
+    //     {
+    //         name: 'Rafeal Leao',
+    //         bank: 'First Bank of Nigeria',
+    //         accountNumber: 'XXXXXXXXXXX23455',
+    //         amount: '-2,000',
+    //         date: 'Sun, 13 Dec 2022',
+    //         time: '08:59',
+    //         type: 'debit'
+    //     },
+    //     {
+    //         name: 'Annette Dove',
+    //         bank: 'First Bank of Nigeria',
+    //         accountNumber: 'XXXXXXXXXXX23455',
+    //         amount: '+2,000',
+    //         date: 'Sun, 13 Dec 2022',
+    //         time: '08:59',
+    //         type: 'credit'
+    //     },
+    //     {
+    //         name: 'Michael Afolabi',
+    //         bank: 'First Bank of Nigeria',
+    //         accountNumber: 'XXXXXXXXXXX23455',
+    //         amount: '+2,000',
+    //         date: 'Sun, 13 Dec 2022',
+    //         time: '08:59',
+    //         type: 'credit'
+    //     },
+    //     {
+    //         name: 'Stephen Drogba',
+    //         bank: 'First Bank of Nigeria',
+    //         accountNumber: 'XXXXXXXXXXX23455',
+    //         amount: '-2,000',
+    //         date: 'Sun, 13 Dec 2022',
+    //         time: '08:59',
+    //         type: 'debit'
+    //     },
+    // ];
     const showWithdraw = bool => {
         props.showWithdraw(true);
     }
@@ -73,8 +73,8 @@ const Transaction = props => {
            props.showFullTran(bool, page);
     }
     return (
-        <Fragment>
-           {showFullList && <FullTransactionList transactions={dummyTransactions} onClose={showFullTranListHandler}/>}
+         <Fragment>
+        {/* {showFullList && <FullTransactionList transactions={dummyTransactions} onClose={showFullTranListHandler}/>} */}
            {!showFullList &&  <div className={classes.transaction}>
                 <header className={classes['transaction-header']}>
                     <h4>Quick Transaction</h4>
@@ -89,7 +89,7 @@ const Transaction = props => {
                         </div>
                     </div>
                 </header>
-                <TransactionList transactions={dummyTransactions} showFullTran={showFullTranListHandler}/>
+                <TransactionList showFullTran={showFullTranListHandler}/>
             </div>}
         </Fragment>
     );
