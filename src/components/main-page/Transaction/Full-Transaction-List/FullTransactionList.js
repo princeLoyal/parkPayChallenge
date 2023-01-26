@@ -8,7 +8,6 @@ import debit from '../../../../assests/mdi_database-arrow-up-outline.png';
 import classes from './FullTransactionList.module.css';
 const FullTransactionList = props => {
     const transactions = useContext(Transactions);
-alert(transactions)
     const [type, setType] = useState('all');
     const [list, setList] = useState(transactions);
 
