@@ -50,7 +50,7 @@ const MainPage = () => {
         setFocusedFooter(page);
     }
     return (
-        <Fragment>
+        <div style={{position:'relative'}}>
             {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
             {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='recieve'/>}
             {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='make'/>}
@@ -71,7 +71,7 @@ const MainPage = () => {
                 <Footer focus={focusedFooter}/>
                 </footer> }
             
-        </Fragment>
+        </div>
     );
 };
 export default MainPage;
