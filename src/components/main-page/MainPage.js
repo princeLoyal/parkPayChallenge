@@ -10,7 +10,7 @@ import HandlePayment from "./Transaction/paymentHandler/HandlePayment";
 import Withdraw from '../main-page/Transaction/Withdraw';
 
 const MainPage = () => {
-    const [focusedFooter, setFocusedFooter] = useState('profile');
+    const [focusedFooter, setFocusedFooter] = useState('home');
     const [showFullTranList, setShowFullTranList] = useState(false);
     const [showWithdraw, setShowWithdraw] = useState(false);
     const [showModal, setShowModal] = useState(false);
