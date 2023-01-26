@@ -7,7 +7,7 @@ const Footer = props => {
     return (
         <Fragment>
             <footer className={classes['footer-footer']}>
-                <div className={props.focus === 'home'? classes.focus : ''}>
+                <div className={props.focus === 'home' ? classes.focus : ''}>
                     <span><img src={home} alt='Home icon'/></span>
                     <p>Home</p>
                 </div>
