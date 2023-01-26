@@ -1,5 +1,5 @@
 import { Fragment, useState, useContext } from 'react';
-import { Transactions } from '../../../../App.js';
+import { Transactions } from '../../../../App';
 
 import back from '../../../../assests/left.png';
 import credit from '../../../../assests/mdi_database-arrow-down-outline.png';
@@ -8,6 +8,7 @@ import debit from '../../../../assests/mdi_database-arrow-up-outline.png';
 import classes from './FullTransactionList.module.css';
 const FullTransactionList = props => {
     const transactions = useContext(Transactions);
+alert(transactions)
     const [type, setType] = useState('all');
     const [list, setList] = useState(transactions);
 
