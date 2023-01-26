@@ -10,23 +10,13 @@ import HandlePayment from "./Transaction/paymentHandler/HandlePayment";
 import Withdraw from '../main-page/Transaction/Withdraw';
 
 const MainPage = () => {
-    const [focusedFooter, setFocusedFooter] = useState('home');
+    const [focusedFooter, setFocusedFooter] = useState('profile');
     const [showFullTranList, setShowFullTranList] = useState(false);
     const [showWithdraw, setShowWithdraw] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [showMainPage, setShowMainPage] = useState(true);
     const [showHandlePayment, setShowHandlePayment] = useState({ bool: false, type: ''});
-    
-    useEffect(() => {
-        if(showFullTranList === false){
-            setFocusedFooter('home');
-        };
-        if(showFullTranList === true){
-            setFocusedFooter('transaction');
-        }
-        console.log(focusedFooter)
-    }, []);
-    
+   
     const showModalHandler = bool => {
         setShowModal(bool);
     };
@@ -54,8 +44,9 @@ const MainPage = () => {
     const goDashBoardHandler = () => {
         setShowMainPage(true);
     }
-    const showFullTranListHandler = bool => {
+    const showFullTranListHandler = (bool, page) => {
         setShowFullTranList(bool);
+        setFocusedFooter(page);
     }
     return (
         <Fragment>
@@ -78,6 +69,7 @@ const MainPage = () => {
                 <Footer focus={focusedFooter}/>
                 </footer>
             </div> }
+            
         </Fragment>
     );
 };

@@ -5,7 +5,7 @@ import profile from '../../assests/iconoir_profile-circled.png';
 import classes from './Footer.module.css';
 const Footer = props => {
     return (
-        <Fragment>
+        <Fragment>{console.log(props.focus)}
             <footer className={classes['footer-footer']}>
                 <div className={props.focus === 'home' ? classes.focus : ''}>
                     <span><img src={home} alt='Home icon'/></span>

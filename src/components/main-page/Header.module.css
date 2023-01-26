@@ -64,61 +64,6 @@
   text-align: center;
   color: #FFFFFF;
   }
-
-
-
-
-
-
-/* .header-header div:last-child{
-    background-image: url('../../picturesAndFiles/Lines.png');
-    background-size: 200%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-firstDiv {
-    display: flex;
-    flex-direction: column;
-  }
-  .header-bell {
-    align-self: flex-end;
-    position: absolute;
-    top: 2rem;
-    right: 2rem
-  }
-.header-firstDiv p:nth-child(2){
-    margin-top: 9px;
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
- .header-firstDiv .header-wavyhand {
-    position: absolute;
-    left: 4.2rem;
-    top: 3.9rem;
-  }
-  .header-secondDiv {
-    padding-top: 2rem;
-    position: relative;
-  }
-  .header-secondDiv p:nth-child(1){
-    font-size: 2.5vw;
-  }
-  .header-secondDiv p:nth-child(2) {
-    position: relative;
-    font-size: 10vw;
-    margin-bottom: 0.5em;
-  }
-.header-secondDiv p:nth-child(3) {
-     font-size:3vw;
-     margin: 1.5rem 0 1rem;
-}
-.header-secondDiv p:nth-child(2) span {
-  position: absolute;
-  top: -1.5rem;
-  right: -2.5rem;
-}
-*/
 @media only screen and (min-width: 600px) {
   .header-secondDiv p:nth-child(1){
     font-size: 0.8rem;

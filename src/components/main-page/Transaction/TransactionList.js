@@ -7,7 +7,7 @@ const TransactionList = props => {
       <Fragment>
          <header className={classes['transactionList-header']}>
             <p>Recent Transactions</p>
-            <button onClick={() => props.showFullTran(true)}>View All</button>
+            <button onClick={() => props.showFullTran(true, 'transaction')}>View All</button>
          </header>
          <main className={classes['transactionList-main']}>
             <ul>

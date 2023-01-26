@@ -68,9 +68,9 @@ const Transaction = props => {
     const showWithdraw = bool => {
         props.showWithdraw(true);
     }
-    const showFullTranListHandler = bool => {
+    const showFullTranListHandler = (bool, page) => {
            setShowFullList(bool);
-           props.showFullTran(bool);
+           props.showFullTran(bool, page);
     }
     return (
         <Fragment>
