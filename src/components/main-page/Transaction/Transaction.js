@@ -74,7 +74,7 @@ const Transaction = props => {
     }
     return (
          <Fragment>
-        { {showFullList && <FullTransactionList onClose={showFullTranListHandler}/>} }
+         {showFullList && <FullTransactionList onClose={showFullTranListHandler}/>}
            {!showFullList &&  <div className={classes.transaction}>
                 <header className={classes['transaction-header']}>
                     <h4>Quick Transaction</h4>
