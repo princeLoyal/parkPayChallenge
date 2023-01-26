@@ -14,7 +14,6 @@ const Header = () => {
     }
     return (
         <Fragment>
-            <div>
             <header className={classes['header-header']}>
                 <div className={classes['header-firstDiv']}>
                     <p>Welcome back,</p> 
@@ -32,7 +31,6 @@ const Header = () => {
                 <p>{date.weekDay}, {date.monthDay}th {date.month}</p>
             </div>
             </header>
-            </div>
         </Fragment>
     );
 };
