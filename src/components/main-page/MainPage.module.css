@@ -1,11 +1,11 @@
-.mainDiv {
+.main-page-div {
     position: relative;
 }
-.mainDiv .header {
+.main-page-div .header {
    position: sticky;
    top: 0;
 }
-.mainDiv .footer {
+.main-page-div .footer {
    position: sticky;
    bottom: 0;
    z-index: 2;
@@ -17,45 +17,3 @@
     bottom: 30%;
     z-index: 3;
 }
-.modal-div {
-    background: #FDFDFD;
-    border: 1px solid #DEDCDC;
-    border-radius: 8px;
-    padding: 1rem 0.5rem;  
-    display:flex;
-    margin-top: 1rem;
-    gap: 3rem;
-    cursor: pointer;
-}
-.modal-div-p {
-    display:flex;
-    background-color: #123CAA;
-    border-radius: 10rem;
-    padding: 0.5rem;
-}
-.modal-div-p img {
-    width:30px
-}
-.modal-div-1 p:nth-child(1) {
-    font-family: 'Helvetica Neue';
-    font-weight: 600;
-    line-height: 19px;
-    color: #000000;
-}
-.modal-div-1 p:nth-child(2) {
-    font-family: 'Helvetica Neue';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    color: #696969;
-}
-.payment-modal {
-    bottom:1rem;
-    left: calc(50% - 11rem);
-}
-@media (min-width: 600px) {
-    .payment-modal {
-      width: 35rem;
-      left: calc(50% - 18rem);
-    }
-  }

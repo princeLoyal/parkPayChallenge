@@ -1,7 +1,7 @@
 import classes from './ModalPaymentDetails.module.css';
 import alert from '../../../../assests/alert-triangle.png';
 
-import Modal from '../../../UI/Modal';
+import Modal from '../../../UI/Modals/Modal';
 const ModalPaymentDetails = props => {
     return(
        <Modal className={classes['modal-payment-details']}>

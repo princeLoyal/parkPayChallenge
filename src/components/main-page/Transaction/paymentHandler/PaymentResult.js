@@ -1,5 +1,5 @@
 import classes from './PaymentResult.module.css';
-import Modal from '../../../UI/Modal';
+import Modal from '../../../UI/Modals/Modal';
 import Button from '../../../UI/Button';
 
 import failed from '../../../../assests/Frame 1000001594.png';

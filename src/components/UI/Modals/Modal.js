@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import backArrow from '../../assests/left.png';
+import backArrow from '../../../assests/left.png';
 
 import classes from './Modal.module.css';
 

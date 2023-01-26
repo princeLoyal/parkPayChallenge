@@ -1,7 +1,7 @@
 import { useState, useEffect, Fragment } from 'react';
 
 import Button from '../../../UI/Button';
-import Modal from '../../../UI/Modal';
+import Modal from '../../../UI/Modals/Modal';
 import ModalResult from './PaymentResult';
 import CancelModal from '../paymentHandler/ModalPaymentDetails';
 
