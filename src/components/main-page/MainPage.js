@@ -55,6 +55,10 @@ const MainPage = () => {
             setShowMainPage(false);
             setShowFullTranList(true);
             setFocusedFooter(page);
+        } else if(page === 'profile'){
+            setShowMainPage(false);
+            setShowProfile(true);
+            setFocusedFooter(page);
         }
     }
     return (
