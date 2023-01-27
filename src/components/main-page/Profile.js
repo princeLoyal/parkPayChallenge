@@ -12,7 +12,7 @@ import contactUs from '../../assests/mdi-light_phone.png';
 import classes from './Profile.module.css';
 const Profile = props => {
     return (
-        <div style={{height:90vh}}>
+        <div>
             <div className={classes['profile-fDiv']}>
                 <div>
                     <p>My Account</p>
