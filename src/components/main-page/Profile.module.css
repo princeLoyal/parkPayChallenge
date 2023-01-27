@@ -21,6 +21,13 @@
 .profile-sDiv div {
    display: flex;
    gap: 0.5rem;
-   border: 1px solid grey;
-   padding: 0.5 rem;
+   border: 1px solid #252525;
+   padding: 0.5rem;
+}
+.profile-sDiv div p {
+   font-size: 14px;
+   line-height: 17px;
+}
+.profile-sDiv div img {
+    width: 1rem;
 }
