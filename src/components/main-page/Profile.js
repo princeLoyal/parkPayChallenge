@@ -13,7 +13,7 @@ import classes from './Profile.module.css';
 const Profile = props => {
     return (
         <Fragment>
-            <div>
+            <div className={classes['profile-fDiv']}>
                 <div>
                     <p>My Account</p>
                     <p>Michael Afolabi Johnson</p>
@@ -21,7 +21,7 @@ const Profile = props => {
                 </div>
                 <img src={profilePic} alt='Profile pic'/>
             </div>
-            <div>
+            <div className={classes['profile-sDiv']}>
                 <div>
                     <img src={profile} alt='Profile'/>
                     <p>Profile Settings</p>
