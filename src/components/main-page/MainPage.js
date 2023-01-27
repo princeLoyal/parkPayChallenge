@@ -12,6 +12,7 @@ import HandlePayment from "./Transaction/paymentHandler/HandlePayment";
 import Withdraw from '../main-page/Transaction/Withdraw';
 
 const MainPage = () => {
+    const [showProfile, setShowProfile] = useState(false);
     const [focusedFooter, setFocusedFooter] = useState('home');
     const [showFullTranList, setShowFullTranList] = useState(false);
     const [showWithdraw, setShowWithdraw] = useState(false);
@@ -58,7 +59,7 @@ const MainPage = () => {
     }
     return (
         <Fragment>
-            <Profile />
+            { showProfile && <Profile /> }
             {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
             {!showMainPage && showHandlePayment.bool && !showWithdraw && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type={showHandlePayment.type}/>}
              
