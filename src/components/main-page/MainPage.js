@@ -50,13 +50,16 @@ const MainPage = () => {
         if(page === 'home'){
             setShowMainPage(true);
             setShowFullTranList(false);
+            setShowProfile(false);
             setFocusedFooter(page);
         } else if(page === 'transaction'){
             setShowMainPage(false);
             setShowFullTranList(true);
+            setShowProfile(false);
             setFocusedFooter(page);
         } else if(page === 'profile'){
             setShowMainPage(false);
+            setShowFullTranList(false);
             setShowProfile(true);
             setFocusedFooter(page);
         }
