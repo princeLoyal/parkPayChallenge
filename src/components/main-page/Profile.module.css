@@ -3,6 +3,12 @@
    align-items:center;
    justify-content: space-between;
    background: #123CAA;
-   padding: 0.5rem;
+   padding: 1.5rem 1rem;
+}
+.profile-fDiv div {
+   color: red;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 14px;
+   line-height: 17px;
 }
 .profile-sDiv {}
