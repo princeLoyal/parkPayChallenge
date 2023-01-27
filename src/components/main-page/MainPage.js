@@ -28,19 +28,13 @@ const MainPage = () => {
     }
     const clickPaymentHandler = (bool, type) => {
         setShowMainPage(!bool);
-        setShowModal(!bool);
-        if(type === 'recieve') {
-            setShowHandlePayment({
-                bool: true,
-                type: 'recieve'
-            });
-        };
-        if(type === 'make') {
-            setShowHandlePayment({
-                bool: true,
-                type: 'make'
-            });
-        };
+        setShowModal(bool);
+        setShowHandlePayment( prevState => {
+            return {
+                bool: bool,
+                type: type
+            };
+        });
     };
     const goDashBoardHandler = () => {
         setShowMainPage(true);
@@ -50,10 +44,9 @@ const MainPage = () => {
         setFocusedFooter(page);
     }
     return (
-        <div style={{position:'relative'}}>
+        <Fragment>
             {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
-            {!showMainPage &&  showHandlePayment.bool && !showWithdraw && showHandlePayment.type === 'recieve' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='recieve'/>}
-            {!showMainPage &&  showHandlePayment.bool && !showWithdraw &&showHandlePayment.type === 'make' && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type='make'/>}
+            {!showMainPage && showHandlePayment.bool && !showWithdraw && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type={showHandlePayment.type}/>}
              
              { showMainPage && !showFullTranList && <div className={classes['main-page-div']}>
                 <p className={classes.imgStyle} onClick={() => showModalHandler(true)}>
@@ -70,8 +63,7 @@ const MainPage = () => {
                 {!showWithdraw && !showHandlePayment.bool && <footer className={classes.footer}>
                 <Footer focus={focusedFooter}/>
                 </footer> }
-            
-        </div>
+        </Fragment>
     );
 };
 export default MainPage;

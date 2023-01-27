@@ -14,17 +14,20 @@
 .imgStyle {
     cursor: pointer;
     position: fixed;
-    right: calc(12%);
+    right: calc(50% - 16.5rem);
     top: 50%;
     z-index: 3;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 300px) {
     .imgStyle {
-        right:calc(30%)
+        right:calc(50% - 11rem)
     }
 }
 @media only screen and (min-width: 600px) {
+    .imgStyle {
+        right:calc(50% - 16.5rem)
+    }
     .footer {
-        width:35rem;
+        width:34rem;
     }
 }

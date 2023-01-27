@@ -37,9 +37,9 @@ const FullTransactionList = props => {
                 </div>
             </div>
             <nav className={classes['fullTransaction-nav']}>
-                <button onClick={() => typeHandler('all')} className={type === 'all' && classes['all-focused']}>All</button>
-                <button onClick={() => typeHandler('credit')} className={type === 'credit' && classes['credit-focused']}>Credit</button>
-                <button onClick={() => typeHandler('debit')} className={type === 'debit' && classes['debit-focused']}>Debit</button>
+                <button onClick={() => typeHandler('all')} className={type === 'all'? classes['all-focused'] : ''}>All</button>
+                <button onClick={() => typeHandler('credit')} className={type === 'credit'? classes['credit-focused'] : ''}>Credit</button>
+                <button onClick={() => typeHandler('debit')} className={type === 'debit'? classes['debit-focused'] : ''}>Debit</button>
             </nav>
             <ul  className={classes['fullTransaction-ul']}>
                {

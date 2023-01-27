@@ -34,7 +34,7 @@ const HandlePayment = props => {
                     <p>Enter amount below</p>
                 </div>
                 <p className={classes['payment-1-div-p']}
-                onClick={() => props.onClose(false)}
+                onClick={() => props.onClose(false, '')}
                 ><img src={close} alt='Close'/></p>
             </div>
             <div className={classes['payment-2-div']}>
