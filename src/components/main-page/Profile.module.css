@@ -1,2 +1,5 @@
-.profile-fDiv {color:red}
+.profile-fDiv {
+   display:flex;
+   align-items:center;
+}
 .profile-sDiv {}
