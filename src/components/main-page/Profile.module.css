@@ -15,4 +15,10 @@
     font-weight: 700;
     line-height: 20px;
 }
-.profile-sDiv {}
+.profile-sDiv {
+   margin: 2rem 0.5rem;
+}
+.profile-sDiv div {
+   display: flex;
+   gap: 0.5rem;
+}
