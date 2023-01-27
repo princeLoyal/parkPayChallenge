@@ -2,6 +2,7 @@ import { Fragment, useState, useContext } from "react";
 import plus from '../../assests/Frame 1000001199.png';
 
 import Header from "./Header";
+import Profile from './Profile';
 import Transaction from "./Transaction/Transaction";
 import TransactionList from "./Transaction/Full-Transaction-List/FullTransactionList";
 import Footer from './Footer';
@@ -57,6 +58,7 @@ const MainPage = () => {
     }
     return (
         <Fragment>
+            <Profile />
             {showWithdraw && <Withdraw onClose={showWithdrawHandler}/>}
             {!showMainPage && showHandlePayment.bool && !showWithdraw && <HandlePayment onClose={clickPaymentHandler} dashBoard={goDashBoardHandler} type={showHandlePayment.type}/>}
              
