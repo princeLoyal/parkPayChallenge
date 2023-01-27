@@ -21,9 +21,10 @@
 .profile-sDiv div {
    display: flex;
    gap: 0.5rem;
-   border: 1px solid #252525;
+   border: 1px solid grey;
    padding: 0.5rem;
    margin: 0.5rem 0;
+   border-radius: 1rem;
 }
 .profile-sDiv div p {
    font-size: 14px;
