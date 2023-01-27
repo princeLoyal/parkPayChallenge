@@ -1,5 +1,8 @@
 .profile-fDiv {
    display:flex;
    align-items:center;
+   justify-content: space-between;
+   background: #123CAA;
+   padding: 0.5rem;
 }
 .profile-sDiv {}
