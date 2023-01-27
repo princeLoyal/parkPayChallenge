@@ -17,7 +17,8 @@ const Footer = props => {
                     <span><img src={transaction} alt='Transaction icon'/></span>
                     <p>Transaction</p>
                 </div>
-                <div className={props.focus === 'profile'? classes.focus : ''}>
+                <div className={props.focus === 'profile'? classes.focus : ''}
+                onClick={() => props.clickHandler('profile')}>
                     <span><img src={profile} alt='Profile icon'/></span>
                     <p>Profile</p>
                 </div>
