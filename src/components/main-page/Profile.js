@@ -43,7 +43,7 @@ const Profile = props => {
                     <p>Account Settings</p>
                 </div>
                 <div>
-                    <img src={} alt=''/>
+                    <img src={contactUs} alt='Contact us'/>
                     <p>Contact Us</p>
                 </div>
                 <div>
