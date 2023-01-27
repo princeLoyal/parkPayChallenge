@@ -6,9 +6,13 @@
    padding: 1.5rem 1rem;
 }
 .profile-fDiv div {
-   color: red;
+   color: white;
    font-family: "Times New Roman", Times, serif;
    font-size: 14px;
    line-height: 17px;
+}
+.profile-fDiv div p:first-child {
+    font-weight: 700;
+    line-height: 20px;
 }
 .profile-sDiv {}
