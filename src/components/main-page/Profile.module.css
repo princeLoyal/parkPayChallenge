@@ -21,4 +21,6 @@
 .profile-sDiv div {
    display: flex;
    gap: 0.5rem;
+   border: 1px solid grey;
+   padding: 0.5 rem;
 }
