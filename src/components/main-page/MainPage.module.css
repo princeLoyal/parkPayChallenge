@@ -6,10 +6,9 @@
    top: 0;
 }
 .footer {
-   position: fixed;
+   position: sticky;
    bottom: 0;
    z-index: 2;
-   width:95vw;
 }
 .imgStyle {
     cursor: pointer;
