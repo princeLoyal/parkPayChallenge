@@ -40,8 +40,20 @@ const MainPage = () => {
         setShowMainPage(true);
     }
     const showFullTranListHandler = (bool, page) => {
+        setShowMainPage(!bool);
         setShowFullTranList(bool);
         setFocusedFooter(page);
+    }
+    const footerButtonClickHandler = page => {
+        if(page === 'home'){
+            setShowMainPage(true);
+            setShowFullTranList(false);
+            setFocusedFooter(page);
+        } else if(page === 'transaction'){
+            setShowMainPage(false);
+            setShowFullTranList(true);
+            setFocusedFooter(page);
+        }
     }
     return (
         <Fragment>
@@ -61,7 +73,7 @@ const MainPage = () => {
                 </main> </div>}
                 { showFullTranList && <TransactionList onClose={showFullTranListHandler}/> }
                 {!showWithdraw && !showHandlePayment.bool && <footer className={classes.footer}>
-                <Footer focus={focusedFooter}/>
+                <Footer focus={focusedFooter} clickHandler={footerButtonClickHandler}/>
                 </footer> }
         </Fragment>
     );

@@ -7,11 +7,13 @@ const Footer = props => {
     return (
         <Fragment>
             <footer className={classes['footer-footer']}>
-                <div className={props.focus === 'home' ? classes.focus : ''}>
+                <div className={props.focus === 'home' ? classes.focus : ''}
+                onClick={() => props.clickHandler('home')}>
                     <span><img src={home} alt='Home icon'/></span>
                     <p>Home</p>
                 </div>
-                <div className={props.focus === 'transaction'? classes.focus : ''}>
+                <div className={props.focus === 'transaction'? classes.focus : ''}
+                onClick={() => props.clickHandler('transaction')}>
                     <span><img src={transaction} alt='Transaction icon'/></span>
                     <p>Transaction</p>
                 </div>
