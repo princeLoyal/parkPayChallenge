@@ -6,7 +6,7 @@ import classes from './TransactionList.module.css';
 const TransactionList = props => {
    const transactions = useContext(Transactions)
    return (
-      <Fragment>
+      <div>
          <header className={classes['transactionList-header']}>
             <p>Recent Transactions</p>
             <button onClick={() => props.showFullTran(true, 'transaction')}>View All</button>
@@ -37,7 +37,7 @@ const TransactionList = props => {
                }
             </ul>
          </main>
-      </Fragment>
+      </div>
    );
 };
 export default TransactionList;
