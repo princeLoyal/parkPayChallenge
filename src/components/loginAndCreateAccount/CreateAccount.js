@@ -1,4 +1,4 @@
-import { Fragment, useState, useRef } from 'react';
+import { Fragment, useState, useRef, useCallback } from 'react';
 import Login from './Login';
 import classes from './CreateAccount.module.css';
 
@@ -36,7 +36,7 @@ const CreateAccount = props => {
            setCreatingAccount(false);
    };
 
-const emailVerify = async() => {
+const emailVerify = useCallback(async() => {
    const response = await fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json');
    const data = await response.json();
    for(const key in data){
@@ -45,7 +45,7 @@ const emailVerify = async() => {
         setCreatingAccount(false);
       };
    };
-};
+});
     return <Fragment>
            { creatingAcount && <main>
             <header className={classes['create-account-header']}>
