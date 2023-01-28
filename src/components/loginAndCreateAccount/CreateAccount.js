@@ -18,7 +18,7 @@ const CreateAccount = props => {
          email: userEmail.current.value,
          password: userPassword.current.value
       };
-      const databaseHandler1 = async() => {
+      const databaseHandler = async() => {
         fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
            method: 'POST', 
            headers: {
@@ -26,15 +26,6 @@ const CreateAccount = props => {
            },
            body: JSON.stringify(data),
         })
-      };
-      const databaseHandler = async() => {
-         const response = await fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json');
-         const data1 = await response.json();
-         for(const key in data1){
-              const g = data1[key].email
-         alert(key + '' + g);
-}
-await alert(data1.email);
       };
       databaseHandler();
       //localStorage.setItem('loggedIn', 1);
