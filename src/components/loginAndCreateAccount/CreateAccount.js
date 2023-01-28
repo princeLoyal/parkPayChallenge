@@ -35,6 +35,10 @@ const CreateAccount = props => {
    const loginButtonClickHandler = () => {
            setCreatingAccount(false);
    };
+
+const emailVerify = () => {
+   alert('hshdh')
+};
     return <Fragment>
            { creatingAcount && <main>
             <header className={classes['create-account-header']}>
@@ -49,6 +53,7 @@ const CreateAccount = props => {
               placeholder='Email address'
               ref={userEmail}
               required
+              onBlur={emailVerify}
               />
               <label htmlFor='phone number'></label>
               <input id='phone number' 
