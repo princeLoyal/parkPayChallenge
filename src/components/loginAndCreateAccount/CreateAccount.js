@@ -28,7 +28,7 @@ const CreateAccount = props => {
         })
       };
       databaseHandler();
-      localStorage.setItem('loggedIn', 1);
+      //localStorage.setItem('loggedIn', 1);
       alert("Your logged in status has been saved. You won't need to log when the page refreshes");
       props.onLogin();
    };
