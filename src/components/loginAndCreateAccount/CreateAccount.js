@@ -14,8 +14,13 @@ const CreateAccount = props => {
    const [creatingAcount, setCreatingAccount] = useState(true);
    const accountCreationHandler = event => {
       event.preventDefault();
-
-
+      const databaseHandler = async() => {
+         const response = fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
+             method: POST,
+             body: json.stringify({user:'help'})
+         })
+      };
+      databaseHandler();
       localStorage.setItem('loggedIn', 1);
       alert("Your logged in status has been saved. You won't need to log when the page refreshes");
       props.onLogin();
