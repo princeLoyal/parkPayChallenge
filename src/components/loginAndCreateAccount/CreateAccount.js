@@ -36,8 +36,9 @@ const CreateAccount = props => {
            setCreatingAccount(false);
    };
 
-const emailVerify = () => {
-   alert('hshdh')
+const emailVerify = async() => {
+   const response = await fetch(https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json);
+   const data = await response.json();
 };
     return <Fragment>
            { creatingAcount && <main>
