@@ -9,6 +9,8 @@ import password from '../../assests/ph_lock-light.png';
 import referal from '../../assests/ph_user-light.png';
 
 const CreateAccount = props => {
+   const userEmail = useRef();
+   const userPassword = useRef();
    const [creatingAcount, setCreatingAccount] = useState(true);
    const accountCreationHandler = event => {
       event.preventDefault();
@@ -33,6 +35,7 @@ const CreateAccount = props => {
               type='email'
               className={classes.email}
               placeholder='Email address'
+              ref={userEmail}
               required
               />
               <label htmlFor='phone number'></label>
@@ -48,6 +51,7 @@ const CreateAccount = props => {
               className={classes.password}
               placeholder='Create pasword'
               required
+              ref={userPassword}
               />
               <label htmlFor='confirm password'></label>
               <input id='confirm password' 
