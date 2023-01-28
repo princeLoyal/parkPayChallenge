@@ -15,7 +15,7 @@ const CreateAccount = props => {
    const accountCreationHandler = event => {
       event.preventDefault();
       const databaseHandler = async() => {
-         const response = fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
+         const response = await fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
              method: POST,
              body: json.stringify({user:'help'})
          })
