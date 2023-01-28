@@ -24,7 +24,7 @@ const CreateAccount = props => {
            headers: {
               'Content-Type': 'application/json',
            },
-           body: JSON.stringify({name:'Thompson'}),
+           body: JSON.stringify(data),
         })
       };
       databaseHandler();
