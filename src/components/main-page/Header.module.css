@@ -1,7 +1,8 @@
 .header-header {
+  position:relative;
   width: 100%;
   background: #123CAA;
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
   z-index: 50;
 }
 .header-firstDiv p:nth-child(1){

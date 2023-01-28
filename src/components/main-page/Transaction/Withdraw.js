@@ -16,7 +16,8 @@ const Withdraw = props => {
     const remarks = useRef('');
 
     const accNumValidation = () => {
-        alert('jhvgh');
+        const validAccNum = accNum.current.value.trim().length > 6;
+        setValidAccNum(validAccNum);
     }
 
     const formSubmitHandler = event => {
@@ -45,6 +46,7 @@ const Withdraw = props => {
                     type='text'
                     placeholder='Select Bank'
                     ref={bank}
+                    required
                     />
                     <label htmlFor='account number'>Account Number</label>
                     <Input 
@@ -53,6 +55,7 @@ const Withdraw = props => {
                     placeholder='Enter account number'
                     ref={accNum}
                     onBlur={accNumValidation}
+                    required
                     />
                     {validAccNum && <p className={classes['withdraw-acc-num']}>
                         <span><img src={correct}/></span> <span>Your Account Name</span>
@@ -63,6 +66,7 @@ const Withdraw = props => {
                     type='number'
                     placeholder='&#8358; Enter Amount'
                     ref={amount}
+                    required
                     />
                     <label htmlFor='remarks'>Remarks</label>
                     <Input 

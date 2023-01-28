@@ -67,7 +67,9 @@ const PaymentDetails = props => {
     }
     return (
         <Fragment>
-            {showCancelModal && <CancelModal onClose={cancelClickHandler} onCancel={props.onCancel}/>}
+            {showCancelModal && <CancelModal onClose={cancelClickHandler}
+             onCancel={props.onCancel} 
+             className={classes['payment-details-modal']}/>}
             {showResultModal && !showCancelModal && <ModalResult bool={resultBool} onClose={retryHandler} onClickDashBoard={goDashBoardHandler}/>}
             {showModal && <Modal header='Share' onClose={shareButtonHandler} className={classes['payment-details-modal']} >
             <div className={classes['payment-modal']}>
@@ -128,7 +130,7 @@ const PaymentDetails = props => {
                     { props.type === 'recieve' &&   <Button onClick={() => shareButtonHandler(true)} className={classes['payment-details-button']}>
                         Share
                     </Button> }
-                    { props.type === 'make' &&   <Button onClick={() => shareButtonHandler()} className={classes['payment-details-button']}>
+                    { props.type === 'make' &&   <Button onClick={() => goDashBoardHandler()} className={classes['payment-details-button']}>
                         I've completed the payment
                     </Button> }
                     <button className={classes['payment-button']} onClick={() => cancelClickHandler(true)}>

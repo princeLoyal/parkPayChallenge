@@ -1,10 +1,19 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useRef } from 'react';
 import Login from './Login';
 import classes from './CreateAccount.module.css';
+
+import email from '../../assests/circum_mail.jpg';
+import hide from '../../assests/Eye, Hidden.png';
+import phone from '../../assests/mdi-light_phone.png';
+import password from '../../assests/ph_lock-light.png';
+import referal from '../../assests/ph_user-light.png';
+
 const CreateAccount = props => {
    const [creatingAcount, setCreatingAccount] = useState(true);
    const accountCreationHandler = event => {
       event.preventDefault();
+
+
       localStorage.setItem('loggedIn', 1);
       alert("Your logged in status has been saved. You won't need to log when the page refreshes");
       props.onLogin();
@@ -30,7 +39,7 @@ const CreateAccount = props => {
               <input id='phone number' 
               type='number'
               className={classes['phone-number']}
-              placeholder='Phone Number'
+              placeholder='Phone Number  080#########'
               required
               />
               <label htmlFor='create password'></label>
