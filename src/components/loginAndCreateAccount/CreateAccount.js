@@ -18,7 +18,7 @@ const CreateAccount = props => {
          email: userEmail.current.value,
          password: userPassword.current.value
       };
-      const databaseHandler = async() => {
+      const databaseHandler1 = async() => {
         fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
            method: 'POST', 
            headers: {
@@ -27,10 +27,12 @@ const CreateAccount = props => {
            body: JSON.stringify(data),
         })
       };
+      const databaseHandler = async() => {
+      };
       databaseHandler();
       //localStorage.setItem('loggedIn', 1);
-      alert("Your logged in status has been saved. You won't need to log when the page refreshes");
-      props.onLogin();
+      //alert("Your logged in status has been saved. You won't need to log when the page refreshes");
+      //props.onLogin();
    };
    const loginButtonClickHandler = () => {
            setCreatingAccount(false);
