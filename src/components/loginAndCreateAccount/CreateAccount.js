@@ -45,7 +45,7 @@ const emailVerify = useCallback(async() => {
         setCreatingAccount(false);
       };
    };
-});
+}, []);
     return <Fragment>
            { creatingAcount && <main>
             <header className={classes['create-account-header']}>
