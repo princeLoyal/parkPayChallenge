@@ -14,6 +14,10 @@ const CreateAccount = props => {
    const [creatingAcount, setCreatingAccount] = useState(true);
    const accountCreationHandler = event => {
       event.preventDefault();
+      const data = {
+         email: userEmail.current.value,
+         password: userPassword.current.value
+      };
       const databaseHandler = async() => {
         fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
            method: 'POST', 
