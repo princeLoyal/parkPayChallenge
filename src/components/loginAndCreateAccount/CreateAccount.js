@@ -16,12 +16,12 @@ const CreateAccount = props => {
       event.preventDefault();
       const databaseHandler = async() => {
         fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
-  method: 'POST', // or 'PUT'
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({name:'Thompson'}),
-})
+           method: 'POST', 
+           headers: {
+              'Content-Type': 'application/json',
+           },
+           body: JSON.stringify({name:'Thompson'}),
+        })
       };
       databaseHandler();
       localStorage.setItem('loggedIn', 1);
