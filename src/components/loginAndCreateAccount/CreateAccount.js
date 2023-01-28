@@ -32,7 +32,7 @@ const CreateAccount = props => {
          const data1 = await response.json();
          for(const key in data1){
               const g = data1[key].email
-         alert(g);
+         alert(key + '' + g);
 }
 await alert(data1.email);
       };
