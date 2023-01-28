@@ -29,9 +29,12 @@ const CreateAccount = props => {
       };
       const databaseHandler = async() => {
          const response = await fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json');
-         alert(response)
-const data1 = await response.json();
-         await alert(data1.email);
+         const data1 = await response.json();
+         for(const key in data){
+              const g = data[key].email
+         alert(g);
+}
+await alert(data1.email);
       };
       databaseHandler();
       //localStorage.setItem('loggedIn', 1);
