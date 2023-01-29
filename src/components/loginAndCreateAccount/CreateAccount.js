@@ -11,7 +11,6 @@ import referal from '../../assests/ph_user-light.png';
 const CreateAccount = props => {
    const userEmail = useRef();
    const userPassword = useRef();
-   const [creatingAcount, setCreatingAccount] = useState(true);
    const accountCreationHandler = event => {
       event.preventDefault();
       const data = {
@@ -32,22 +31,20 @@ const CreateAccount = props => {
       //alert("Your logged in status has been saved. You won't need to log when the page refreshes");
       //props.onLogin();
    };
-   const loginButtonClickHandler = () => {
-           setCreatingAccount(false);
-   };
-
+const loginButtonClickHandler = () => {
+   props.onClickLogIn();
+}
 const emailVerify = async() => {
    const response = await fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json');
    const data = await response.json();
    for(const key in data){
       if(userEmail.current.value === data[key].email){
         alert('This email has already been used. Kindly log in');
-        setCreatingAccount(false);
       };
    };
 };
     return <Fragment>
-           { creatingAcount && <main>
+           <main>
             <header className={classes['create-account-header']}>
               <h1>Create Your Account </h1>
               <p>Pay by transfer</p>
@@ -99,8 +96,7 @@ const emailVerify = async() => {
                 <p>
                   By tapping Sign up, you agree to our <button>Terms & conditions</button> <br/>and <button>Privacy Policy</button>
                 </p>
-           </footer> </main> }
-           {!creatingAcount && <Login onLogin={props.onLogin}/>}
-       </Fragment>
+           </footer> </main> 
+         </Fragment>
   };
   export default CreateAccount;

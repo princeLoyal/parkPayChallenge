@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import FirstPage from './components/loginAndCreateAccount/FirstPage';
+import LoginAndCreateAcc from './components/loginAndCreateAccount/LoginAndCreateAcc';
 import MainPage from './components/main-page/MainPage';
 import classes from './App.module.css';
 const dummyTransactions = [
@@ -76,7 +76,7 @@ function App() {
   return (
     <div className={classes.app}>
      { !isLoggedIn && <section>
-       <FirstPage onLogin={onLoginHandler}/>
+       <LoginAndCreateAcc onLogin={onLoginHandler}/>
       </section>}
       {isLoggedIn && <section>
         <Transactions.Provider value={dummyTransactions}>

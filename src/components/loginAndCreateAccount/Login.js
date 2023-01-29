@@ -2,9 +2,8 @@ import { Fragment, useState } from "react";
 import CreateAccount from "./CreateAccount";
 import classes from './Login.module.css';
 const Login = props => {
-    const [loggingIn, setLoggingIn] = useState(true);
     const accountCreateButtonClickHandler = () => {
-        setLoggingIn(false);
+        props.onClickCreateAcc();
     };
     const loginHandler = event => {
         event.preventDefault();
@@ -14,8 +13,7 @@ const Login = props => {
         props.onLogin();
     };
     return <Fragment>
-        {!loggingIn && <CreateAccount />}
-        { loggingIn && <main>
+       <main>
         <header className={classes['login-header']}>
             <h1>Log In</h1>
             <p>Payment on the go!</p>
@@ -46,7 +44,7 @@ const Login = props => {
              By tapping Sign up, you agree to our <button>Terms & conditions</button> <br/>and <button>Privacy Policy</button>
         </p>
         </footer>
-        </main> }
+        </main>
     </Fragment>
 };
 export default Login;
