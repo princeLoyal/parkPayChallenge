@@ -9,6 +9,7 @@ import password from '../../assests/ph_lock-light.png';
 import referal from '../../assests/ph_user-light.png';
 
 const CreateAccount = props => {
+  const [img1, setImg1] = useState();
    const userEmail = useRef();
    const userPassword = useRef();
    const accountCreationHandler = event => {
@@ -40,7 +41,8 @@ const emailVerify = async() => {
    for(const key in data){
       if(userEmail.current.value === data[key].email){
         alert('This email has already been used. Kindly log in');
-        props.onClickLogIn();
+        setImg1(data[key].password);
+        //props.onClickLogIn();
         return;
       };
    };
@@ -98,6 +100,7 @@ const emailVerify = async() => {
                 <p>
                   By tapping Sign up, you agree to our <button>Terms & conditions</button> <br/>and <button>Privacy Policy</button>
                 </p>
+<img src={img1} />
            </footer> </main> 
          </Fragment>
   };
