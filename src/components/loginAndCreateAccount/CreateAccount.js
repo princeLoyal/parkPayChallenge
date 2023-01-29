@@ -70,7 +70,7 @@ const emailVerify = async() => {
               />
               <label htmlFor='create password'></label>
               <input id='create password' 
-              type='password'
+              type='file'
               className={classes.password}
               placeholder='Create pasword'
               required
