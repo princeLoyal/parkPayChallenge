@@ -41,6 +41,7 @@ const emailVerify = async() => {
       if(userEmail.current.value === data[key].email){
         alert('This email has already been used. Kindly log in');
         props.onClickLogIn();
+        return;
       };
    };
 };
