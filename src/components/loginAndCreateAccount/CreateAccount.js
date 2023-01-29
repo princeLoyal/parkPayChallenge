@@ -1,5 +1,4 @@
 import { Fragment, useState, useRef } from 'react';
-import Login from './Login';
 import classes from './CreateAccount.module.css';
 
 import email from '../../assests/circum_mail.jpg';
@@ -9,6 +8,7 @@ import password from '../../assests/ph_lock-light.png';
 import referal from '../../assests/ph_user-light.png';
 
 const CreateAccount = props => {
+   const [EmailValid, setEmailValid] = use state();
    const userEmail = useRef();
    const userPassword = useRef();
    const accountCreationHandler = event => {
