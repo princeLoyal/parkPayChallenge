@@ -35,7 +35,7 @@ const loginButtonClickHandler = () => {
    props.onClickLogIn();
 }
 const emailVerify = async() => {
-   const response = await fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json');
+   const response = await fetch('http://167.172.181.74:9011/api/auth/register');
    const data = await response.json();
    alert(data);
    //for(const key in data){
