@@ -18,7 +18,7 @@ const CreateAccount = props => {
          password: userPassword.current.value
       };
       const databaseHandler = async() => {
-        fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json', {
+        fetch('http://167.172.181.74:9011/api/user.json', {
            method: 'POST', 
            headers: {
               'Content-Type': 'application/json',
