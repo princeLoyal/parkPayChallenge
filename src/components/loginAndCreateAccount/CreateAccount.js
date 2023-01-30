@@ -35,15 +35,16 @@ const loginButtonClickHandler = () => {
    props.onClickLogIn();
 }
 const emailVerify = async() => {
-   const response = await fetch('https://park-pay-a96b2-default-rtdb.firebaseio.com/user.json');
+   const response = await fetch('http://167.172.181.74:9011/api');
    const data = await response.json();
-   for(const key in data){
-      if(userEmail.current.value === data[key].email){
-        alert('This email has already been used. Kindly log in');
-        props.onClickLogIn();
-        return;
-      };
-   };
+   alert(data);
+   //for(const key in data){
+    //  if(userEmail.current.value === data[key].email){
+       // alert('This email has already been used. Kindly log in');
+      //  props.onClickLogIn();
+       // return;
+    //  };
+ //  };
 };
     return <Fragment>
            <main>
