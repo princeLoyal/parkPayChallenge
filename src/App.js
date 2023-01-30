@@ -81,7 +81,7 @@ function App() {
   }
   return (
     <div className={classes.app}>
-     { !isLoggedIn && <section>
+     { !isLoggedIn && !isLoading &&<section>
        <LoginAndCreateAcc onLogin={onLoginHandler}/>
       </section>}
       {isLoggedIn && <section>
@@ -89,9 +89,9 @@ function App() {
              <MainPage />
         </Transactions.Provider>
         </section>}
-        {/* { isLoading && <div className={classes.parkpay}>
+        { isLoading && <section className={classes.parkpay}>
                  <h1>Parkpay</h1> 
-            </div> } */}
+            </section> }
     </div>
   );
 };
