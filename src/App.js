@@ -71,7 +71,7 @@ function App() {
     };
     const timeout = setTimeout(() => {
         setIsLoading(false);
-    }, 2000);
+    }, 500);
     return () => {
         clearTimeout(timeout);
     };
