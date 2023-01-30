@@ -18,12 +18,12 @@ const CreateAccount = props => {
          password: userPassword.current.value
       };
       const databaseHandler = async() => {
-        fetch('http://167.172.181.74:9011/api/user.json', {
+        fetch('http://167.172.181.74:9011/api/auth/register', {
            method: 'POST', 
-           headers: {
-              'Content-Type': 'application/json',
+           header: {
+              'accept': 'application/json',
            },
-           body: JSON.stringify(data),
+           data-raw: JSON.stringify(data),
         })
       };
       databaseHandler();
