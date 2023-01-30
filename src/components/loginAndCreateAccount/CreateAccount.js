@@ -23,7 +23,7 @@ const CreateAccount = props => {
            header: {
               'accept': 'application/json',
            },
-           data-raw: JSON.stringify(data),
+           body: JSON.stringify(data),
         })
       };
       databaseHandler();
