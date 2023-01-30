@@ -8,6 +8,7 @@ import password from '../../assests/ph_lock-light.png';
 import referal from '../../assests/ph_user-light.png';
 
 const CreateAccount = props => {
+   const [EmailValid, setEmailValid] = use state();
    const userEmail = useRef();
    const userPassword = useRef();
    const accountCreationHandler = event => {
@@ -39,6 +40,8 @@ const emailVerify = async() => {
    for(const key in data){
       if(userEmail.current.value === data[key].email){
         alert('This email has already been used. Kindly log in');
+        props.onClickLogIn();
+        return;
       };
    };
 };
