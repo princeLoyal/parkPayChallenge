@@ -1,6 +1,6 @@
 .create-account-header {
     text-align: center;
-    margin: 2rem 0 25vw 0;
+    margin: 2rem 0 10vw 0;
 }
 .create-account-header h1 {
       color: #123CAA;
@@ -16,7 +16,6 @@
 
 }
 .create-account-form {
-    margin: 2rem 0;
     text-align: center;
 }
 .create-account-form input {

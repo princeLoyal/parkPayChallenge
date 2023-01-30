@@ -8,7 +8,7 @@ import password from '../../assests/ph_lock-light.png';
 import referal from '../../assests/ph_user-light.png';
 
 const CreateAccount = props => {
-   const [EmailValid, setEmailValid] = use state();
+   const [EmailValid, setEmailValid] = useState();
    const userEmail = useRef();
    const userPassword = useRef();
    const accountCreationHandler = event => {

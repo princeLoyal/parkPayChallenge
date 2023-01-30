@@ -3,8 +3,7 @@ import CreateAccount from './CreateAccount';
 import Login from './Login';
 import classes from './LoginAndCreateAcc.module.css';
 const FirstPage = props => {
-    const [creatingAccount, setCreatingAccount] = useState(false);
-    
+    const [creatingAccount, setCreatingAccount] = useState(true);
     const loginClickHandler = () => {
         setCreatingAccount(false);
     }

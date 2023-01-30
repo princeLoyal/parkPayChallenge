@@ -89,9 +89,9 @@ function App() {
              <MainPage />
         </Transactions.Provider>
         </section>}
-        { isLoading && <div className={classes.parkpay}>
+        {/* { isLoading && <div className={classes.parkpay}>
                  <h1>Parkpay</h1> 
-            </div> }
+            </div> } */}
     </div>
   );
 };
