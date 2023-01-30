@@ -1,5 +1,4 @@
 import { Fragment, useState } from "react";
-import CreateAccount from "./CreateAccount";
 import classes from './Login.module.css';
 const Login = props => {
     const accountCreateButtonClickHandler = () => {

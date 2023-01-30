@@ -1,5 +1,4 @@
 import { Fragment, useState, useRef } from 'react';
-import Login from './Login';
 import classes from './CreateAccount.module.css';
 
 import email from '../../assests/circum_mail.jpg';

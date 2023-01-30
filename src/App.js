@@ -61,15 +61,21 @@ const dummyTransactions = [
 
 export const Transactions = React.createContext();
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
- useEffect(() => {
-   const loggedIn = localStorage.getItem('loggedIn');
-   if(loggedIn === '1'){
-       setIsLoggedIn(true);
-   };
- }, []);
 
+  useEffect(() => {
+    const loggedIn = localStorage.getItem('loggedIn');
+    if(loggedIn === '1'){
+        setIsLoggedIn(true);
+    };
+    const timeout = setTimeout(() => {
+        setIsLoading(false);
+    }, 2000);
+    return () => {
+        clearTimeout(timeout);
+    };
+  }, []);
   const onLoginHandler = () => {
       setIsLoggedIn(true);
   }
@@ -83,6 +89,9 @@ function App() {
              <MainPage />
         </Transactions.Provider>
         </section>}
+        { isLoading && <div className={classes.parkpay}>
+                 <h1>Parkpay</h1> 
+            </div> }
     </div>
   );
 };
