@@ -31,7 +31,7 @@ const CreateAccount = props => {
         const data = await response.text();
         alert(data);
        // console.log(data);
-
+     };
       
       databaseHandler();
       //localStorage.setItem('loggedIn', 1);
