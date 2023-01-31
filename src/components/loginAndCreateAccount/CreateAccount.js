@@ -9,9 +9,10 @@ import referal from '../../assests/ph_user-light.png';
 
 const CreateAccount = props => {
    const [EmailValid, setEmailValid] = useState();
+   const userName = useRef();
    const userEmail = useRef();
    const userPassword = useRef();
-
+   const confirmPassword = useRef();
    const accountCreationHandler = event => {
       event.preventDefault();
       const userData = {
@@ -66,6 +67,12 @@ const emailVerify = async() => {
               type='email'
               className={classes.email}
               placeholder='Email address'
+              ref={userName}
+              <label htmlFor='email'></label>
+              <input id='email' 
+              type='email'
+              className={classes.email}
+              placeholder='Email address'
               ref={userEmail}
               
             //   onBlur={emailVerify}
@@ -90,7 +97,7 @@ const emailVerify = async() => {
               type='password'
               className={classes.password}
               placeholder='Confirm password'
-              
+              ref={confirmPassword}
               />
               <label htmlFor='referal code'></label>
               <input id='referal code' 
