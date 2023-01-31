@@ -28,9 +28,11 @@ const CreateAccount = props => {
             body: JSON.stringify(userData),
          }
         const response = await fetch(url, options);
-        const data = await response.json();
-        console.log(data);
-      };
+        const data = await response.text();
+        alert(data);
+       // console.log(data);
+
+      
       databaseHandler();
       //localStorage.setItem('loggedIn', 1);
       //alert("Your logged in status has been saved. You won't need to log when the page refreshes");
