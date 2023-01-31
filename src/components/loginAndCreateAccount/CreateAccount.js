@@ -13,25 +13,34 @@ const CreateAccount = props => {
    const userEmail = useRef();
    const userPassword = useRef();
    const confirmPassword = useRef();
+   const userPhone = useRef();
    const accountCreationHandler = event => {
       event.preventDefault();
       const userData = {
-         email: userEmail.current.value,
-         password: userPassword.current.value
+         // name: userName.current.value,
+         // phone: userPhone.current.value,
+         // email: userEmail.current.value,
+         // password: userPassword.current.value,
+         // password_confirmation: confirmPassword.current.value,
+         name: 'Thompson Onuoha',
+         phone: '09015695508',
+         email: 'princeloyal1234@gmail.com',
+         password: 'gmail',
+         password_confirmation: 'gmail',
       };
       const databaseHandler = async() => {
-         const url = '{{http://167.172.181.74:9011/api}}/auth/register'
+         const url = 'http://167.172.181.74:9011/api/auth/register';
          const options = {
             method: 'POST', 
             headers: {
                'Accept': 'application/json',
             },
             body: JSON.stringify(userData),
-         }
+            redirect: 'follow'
+         };
         const response = await fetch(url, options);
         const data = await response.text();
-        alert(data);
-       // console.log(data);
+        console.log(data);
      };
       
       databaseHandler();
@@ -62,12 +71,13 @@ const emailVerify = async() => {
               <p>Pay by transfer</p>
            </header>
            <form className={classes['create-account-form']} onSubmit={accountCreationHandler}>
-              <label htmlFor='email'></label>
-              <input id='email' 
-              type='email'
-              className={classes.email}
-              placeholder='Email address'
+              <label htmlFor='name'></label>
+              <input id='name' 
+              type='text'
+              className={classes.userName}
+              placeholder='Enter Name'
               ref={userName}
+              />
               <label htmlFor='email'></label>
               <input id='email' 
               type='email'
@@ -82,14 +92,13 @@ const emailVerify = async() => {
               type='number'
               className={classes['phone-number']}
               placeholder='Phone Number  080#########'
-              
+              ref={userPhone}
               />
               <label htmlFor='create password'></label>
               <input id='create password' 
               type='password'
               className={classes.password}
               placeholder='Create pasword'
-              
               ref={userPassword}
               />
               <label htmlFor='confirm password'></label>
