@@ -19,7 +19,7 @@ const CreateAccount = props => {
          password: userPassword.current.value
       };
       const databaseHandler = async() => {
-         const url = '{{http://167.172.181.74:9011/api/auth/register}}'
+         const url = '{{http://167.172.181.74:9011/api}}/auth/register'
          const options = {
             method: 'POST', 
             headers: {
